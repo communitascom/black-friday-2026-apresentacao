@@ -126,6 +126,26 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
 .glowbox{box-shadow:0 0 0 1px rgba(110,143,255,.5),0 0 60px rgba(91,91,255,.35)}
 .dot{width:22px;height:22px;border-radius:50%;background:var(--azul);border:5px solid var(--noite);box-shadow:0 0 14px rgba(51,102,255,.8);margin-left:-1px}
 .dot.m{background:var(--mag);box-shadow:0 0 16px rgba(255,61,219,.9)}
+/* mecânica: passos verticais */
+.flowv .st{display:flex;gap:16px;align-items:center;font:600 21px/1.25 "Work Sans"}
+.flowv .st i{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:900 15px Unbounded;font-style:normal;background:rgba(51,102,255,.2);border:1px solid rgba(110,143,255,.5);color:#C8D3FF}
+.flowv .ar{margin-left:18px;width:2px;height:14px;background:rgba(255,255,255,.2)}
+/* LP: mock do cadastro do cupom */
+.mock-lp{height:380px;border-radius:18px;overflow:hidden;position:relative;border:1px solid var(--fio);
+  background:radial-gradient(60% 70% at 30% 30%,rgba(91,91,255,.35),transparent 70%),radial-gradient(50% 60% at 80% 80%,rgba(255,61,219,.18),transparent 70%),#0B0A14}
+.mock-hero{position:absolute;inset:0;padding:40px 34px;display:flex;flex-direction:column;gap:12px}
+.mock-hero b{font:900 64px/1 Unbounded;letter-spacing:-.05em;color:var(--azul2)}
+.mock-hero span{font:600 20px "Work Sans";max-width:16ch}
+.mock-btn{display:inline-block;align-self:flex-start;margin-top:auto;background:var(--azul);color:#fff;font:600 18px "Work Sans";font-style:normal;padding:14px 26px;border-radius:99px}
+.mock-btn.pulse{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(51,102,255,.6)}50%{box-shadow:0 0 0 14px rgba(51,102,255,0)}}
+.mock-modal{position:absolute;left:28px;right:28px;top:28px;bottom:28px;background:#16142A;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.mock-modal b{font:700 22px "Work Sans"}
+.mock-in{border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:10px 14px;font-size:15px;color:#8C88A2}
+.mock-cp{display:flex;justify-content:space-between;align-items:center;border:2px dashed #8EA6FF;border-radius:12px;padding:14px 16px;font:900 26px Unbounded;letter-spacing:.02em}
+.mock-cp em{font:600 14px "Work Sans";font-style:normal;background:var(--azul);padding:7px 12px;border-radius:99px}
+.mock-btn:not(.pulse){margin-top:auto;align-self:stretch;text-align:center}
+@media (prefers-reduced-motion:reduce){.mock-btn.pulse{animation:none}}
 .line{position:absolute;left:96px;right:96px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,.25),rgba(255,255,255,.05))}
 </style>
 </head>
@@ -146,8 +166,8 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
   <div class="pad"><div class="kick">A campanha</div><h2>Black Friday 2026</h2></div>
   <div class="grid" style="top:270px;grid-template-columns:1.3fr 1fr 1fr 1fr">
     <div class="card hi"><div class="lab" style="margin:0">Oferta</div><div class="big" style="font-size:64px;margin-top:18px">Até 70%</div><p>em cursos selecionados</p></div>
-    <div class="card"><div class="lab" style="margin:0">Período</div><div class="big" style="font-size:44px;margin-top:22px">16 a 30/11</div><p>captação e venda</p></div>
-    <div class="card"><div class="lab" style="margin:0">Black Friday</div><div class="big" style="font-size:44px;margin-top:22px">27/11</div><p>com prorrogação e Cyber Monday</p></div>
+    <div class="card"><div class="lab" style="margin:0">Período</div><div class="big" style="font-size:44px;margin-top:22px">16 a 30/11</div><p>cupom valendo desde o 1º dia</p></div>
+    <div class="card"><div class="lab" style="margin:0">Black Friday</div><div class="big" style="font-size:44px;margin-top:22px">27/11</div><p>pico, com Cyber Monday em 30/11</p></div>
     <div class="card"><div class="lab" style="margin:0">Cupons</div><div class="big" style="font-size:44px;margin-top:22px">7</div><p>um por público e canal</p></div>
   </div>
   <div class="line" style="top:610px"></div>
@@ -215,7 +235,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
 <!-- 08 DIVISOR ESTRATÉGIA -->
 <div class="frame"><section class="slide tone">
   <div style="position:absolute;left:96px;top:250px"><span class="eco" data-t="02">02</span></div>
-  <div style="position:absolute;left:96px;bottom:104px"><h2 style="font-size:84px">Estratégia</h2><p class="lead" style="color:#DCD8F0">Oferta, calendário, públicos e investimento</p></div>
+  <div style="position:absolute;left:96px;bottom:104px"><h2 style="font-size:84px">Estratégia</h2><p class="lead" style="color:#DCD8F0">Oferta, mecânica, calendário, públicos e investimento</p></div>
 </section></div>
 
 <!-- 09 OFERTA -->
@@ -227,11 +247,28 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
     <p style="font:600 34px 'Work Sans';margin-top:20px">até, em cursos selecionados</p>
   </div>
   <div class="grid" style="left:800px;top:250px;grid-template-columns:1fr;gap:16px">
-    <div class="card" style="padding:24px 30px"><div class="n">Cupons</div><h3>Um por público e canal</h3></div>
-    <div class="card" style="padding:24px 30px"><div class="n">Antecipado · 26/11</div><h3>Ex-alunos e in company compram antes</h3></div>
-    <div class="card" style="padding:24px 30px"><div class="n">Extensão · 28 a 30/11</div><h3>Prorrogação e Cyber Monday</h3></div>
+    <div class="card" style="padding:24px 30px"><div class="n">Validade · 16 a 30/11</div><h3>Cupom vale desde o primeiro e-mail</h3></div>
+    <div class="card" style="padding:24px 30px"><div class="n">Cupons</div><h3>Um por público e canal. Na LP, BF26LP</h3></div>
+    <div class="card" style="padding:24px 30px"><div class="n">Urgência</div><h3>Contagem regressiva até 30/11</h3></div>
   </div>
   <div class="num">09</div>
+</section></div>
+
+<!-- MECÂNICA -->
+<div class="frame"><section class="slide">
+  <div class="pad"><div class="kick">Estratégia</div><h2>Mecânica</h2></div>
+  <div class="grid" style="top:240px;grid-template-columns:1fr 1fr;gap:28px">
+    <div class="card hi">
+      <div class="lab" style="margin:0;color:#9DB3FF">Base · e-mail e WhatsApp</div>
+      <div style="display:grid;gap:18px;margin-top:22px" class="flowv" data-steps="E-mail de lançamento em 16/11|Cupom do público no corpo do e-mail|Compra direta no site|Régua com contador até 30/11"></div>
+    </div>
+    <div class="card">
+      <div class="lab" style="margin:0">Novos · anúncios e redes</div>
+      <div style="display:grid;gap:18px;margin-top:22px" class="flowv" data-steps="Anúncio leva para a LP|Garanta seu cupom: nome, e-mail e telefone|Cupom BF26LP na tela e por e-mail|Compra no site"></div>
+    </div>
+  </div>
+  <div class="src">Sem fase de espera: o cupom vale de 16 a 30/11. A urgência vem do prazo.</div>
+  <div class="num">10</div>
 </section></div>
 
 <!-- 10 CALENDÁRIO -->
@@ -247,17 +284,16 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
   <div class="pad"><div class="kick">Estratégia</div><h2>Públicos e cupons</h2></div>
   <div style="position:absolute;left:96px;right:96px;top:240px">
     <table class="t">
-      <tr><th>Público</th><th>Canal</th><th>Cupom</th><th>Abre em</th></tr>
-      <tr><td class="k">Leads de anúncio</td><td>Meta, LinkedIn, LP</td><td><code>BF26VIP</code></td><td>27/11</td></tr>
-      <tr><td class="k">Ex-alunos</td><td>E-mail, WhatsApp</td><td><code>BF26EA</code></td><td>26/11</td></tr>
-      <tr><td class="k">In company</td><td>E-mail, comercial</td><td><code>BF26IC</code></td><td>26/11</td></tr>
-      <tr><td class="k">Base segmentada</td><td>E-mail por área</td><td><code>BF26BS</code></td><td>27/11</td></tr>
-      <tr><td class="k">Base geral</td><td>E-mail</td><td><code>BF26BG</code></td><td>27/11</td></tr>
-      <tr><td class="k">Redes sociais</td><td>Instagram, LinkedIn</td><td><code>BF26RS</code></td><td>27/11</td></tr>
-      <tr><td class="k">WhatsApp</td><td>RD Conversas</td><td><code>BF26WA</code></td><td>27/11</td></tr>
+      <tr><th>Público</th><th>Canal</th><th>Cupom</th><th>Como recebe</th></tr>
+      <tr><td class="k">Novos contatos</td><td>Anúncios, redes, LP</td><td><code>BF26LP</code></td><td>Na LP, após o cadastro, e por e-mail</td></tr>
+      <tr><td class="k">Ex-alunos</td><td>E-mail, WhatsApp</td><td><code>BF26EA</code></td><td>No e-mail de 16/11</td></tr>
+      <tr><td class="k">In company</td><td>E-mail, comercial</td><td><code>BF26IC</code></td><td>No e-mail de 16/11</td></tr>
+      <tr><td class="k">Base segmentada</td><td>E-mail por área</td><td><code>BF26BS</code></td><td>No e-mail de 16/11</td></tr>
+      <tr><td class="k">Base geral</td><td>E-mail</td><td><code>BF26BG</code></td><td>No e-mail de 16/11</td></tr>
+      <tr><td class="k">WhatsApp</td><td>RD Conversas</td><td><code>BF26WA</code></td><td>Na mensagem de 16/11</td></tr>
     </table>
   </div>
-  <div class="src">Nomes de cupom provisórios.</div>
+  <div class="src">Todos valem de 16 a 30/11. Nomes provisórios, exceto BF26LP.</div>
   <div class="num">11</div>
 </section></div>
 
@@ -299,11 +335,11 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
   <div style="position:absolute;left:96px;right:96px;top:240px">
     <table class="t" style="font-size:22px">
       <tr><th style="width:320px">Fase</th><th>Chamada</th></tr>
-      <tr><td class="k">Captação · 16/11</td><td>A Black Friday da Vanzolini vem aí. Garanta seu cupom primeiro.</td></tr>
-      <tr><td class="k">Pré-anúncio · 23/11</td><td>27/11: até 70% de desconto.</td></tr>
-      <tr><td class="k">Antecipado · 26/11</td><td>Você entra antes.</td></tr>
+      <tr><td class="k">Lançamento · 16/11</td><td>Black Friday Vanzolini: seu cupom já vale. Aproveite.</td></tr>
+      <tr><td class="k">Lembrete · 20/11</td><td>Seu cupom vale até 30/11. Escolha seu curso.</td></tr>
+      <tr><td class="k">Contagem · 24/11</td><td>Faltam 6 dias.</td></tr>
       <tr><td class="k">Black Friday · 27/11</td><td>É hoje.</td></tr>
-      <tr><td class="k">Prorrogação · 28 e 29/11</td><td>Prorrogado até domingo.</td></tr>
+      <tr><td class="k">Reta final · 29/11</td><td>Faltam 24 horas.</td></tr>
       <tr><td class="k">Cyber Monday · 30/11</td><td>Último dia.</td></tr>
     </table>
   </div>
@@ -404,9 +440,9 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
 
 <!-- 23 LP -->
 <div class="frame"><section class="slide">
-  <div class="pad" style="right:auto;width:400px"><div class="kick">Aplicações</div><h2>Landing page</h2><p class="lead" style="font-size:20px">Oferta, contagem, vitrine, FAQ e WhatsApp.</p>
+  <div class="pad" style="right:auto;width:400px"><div class="kick">Aplicações</div><h2>Landing page</h2><p class="lead" style="font-size:20px">Uma página de 16 a 30/11. Oferta, contagem, vitrine, FAQ e WhatsApp.</p>
     <a href="https://claude.ai/artifact/Gi6MeEWPyUnAzVvuCLjDbS" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-top:34px;background:var(--azul);color:#fff;text-decoration:none;font:600 19px 'Work Sans';padding:15px 26px;border-radius:99px;box-shadow:0 0 30px rgba(51,102,255,.55)">Abrir a LP ↗</a>
-    <p class="note" style="margin-top:14px">Protótipo navegável: Pré-BF, Black Friday e Cyber Monday.</p>
+    <p class="note" style="margin-top:14px">"Garanta seu cupom" no topo e ao longo da página. Em 30/11, o layout muda sozinho para o Cyber Monday.</p>
   </div>
   <div class="lift" style="position:absolute;left:540px;top:60px;width:680px;height:790px;overflow:hidden;border-radius:14px;background:#07060F">
     <div style="height:28px;background:#1A1824;display:flex;align-items:center;gap:7px;padding:0 12px"><i style="width:10px;height:10px;border-radius:50%;background:#FF5F57"></i><i style="width:10px;height:10px;border-radius:50%;background:#FEBC2E"></i><i style="width:10px;height:10px;border-radius:50%;background:#28C840"></i></div>
@@ -421,9 +457,40 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
   <div class="num">23</div>
 </section></div>
 
+<!-- LP · CUPOM -->
+<div class="frame"><section class="slide">
+  <div class="pad"><div class="kick">Aplicações · landing page</div><h2>Garanta seu cupom</h2></div>
+  <div style="position:absolute;left:96px;right:96px;top:230px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <div>
+      <div class="mock-lp"><div class="mock-hero"><b>ATÉ 70%</b><span>de desconto em cursos selecionados</span><i class="mock-btn pulse">Garanta seu cupom</i></div></div>
+      <div class="lab" style="color:#9DB3FF">1 · Clique</div><p class="note">Botão no topo, na vitrine e no rodapé.</p>
+    </div>
+    <div>
+      <div class="mock-lp"><div class="mock-modal">
+        <b>Receba seu cupom</b>
+        <span class="mock-in">Nome</span><span class="mock-in">E-mail</span><span class="mock-in">Telefone (WhatsApp)</span>
+        <i class="mock-btn">Quero meu cupom</i>
+      </div></div>
+      <div class="lab" style="color:#9DB3FF">2 · Cadastro</div><p class="note">Vai para o RD como conversão LP BLACK26, com a origem da visita.</p>
+    </div>
+    <div>
+      <div class="mock-lp"><div class="mock-modal">
+        <b>Seu cupom está pronto</b>
+        <span class="mock-cp">BF26LP <em>Copiar</em></span>
+        <span style="font-size:14px;color:#A39FB8">Válido até 30/11. Você também vai receber por e-mail.</span>
+        <i class="mock-btn">Ver cursos</i>
+      </div></div>
+      <div class="lab" style="color:#9DB3FF">3 · Cupom</div><p class="note">Na tela, com copiar, e no e-mail da automação.</p>
+    </div>
+  </div>
+  <div class="src">Campos ocultos de origem: utm_source, utm_medium, utm_campaign, utm_content, utm_term, gclid, fbclid e página.</div>
+  <div class="num">24</div>
+</section></div>
+
 <!-- 24 E-MAILS -->
 <div class="frame"><section class="slide">
-  <div class="pad" style="right:auto;width:440px"><div class="kick">Aplicações</div><h2>E-mails</h2><p class="lead" style="font-size:20px">Uma régua por público, cada uma com o seu cupom.</p></div>
+  <div class="pad" style="right:auto;width:440px"><div class="kick">Aplicações</div><h2>E-mails</h2><p class="lead" style="font-size:20px">O primeiro e-mail, em 16/11, já traz o cupom do público. A régua segue com contagem regressiva até 30/11.</p>
+    <p class="note" style="margin-top:22px">O RD não tem contador nativo: entra um GIF animado em cada disparo.</p></div>
   <div style="position:absolute;left:600px;top:60px;display:flex;gap:30px;align-items:flex-start">
     <div class="lift" style="border-radius:10px;overflow:hidden"><div class="sc" style="--z:.68" id="em1"></div></div>
     <div class="lift" style="border-radius:10px;overflow:hidden"><div class="sc" style="--z:.68" id="em2"></div></div>
@@ -467,8 +534,8 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
 <div class="frame"><section class="slide">
   <div class="pad" style="right:auto;width:600px"><div class="kick">Aplicações</div><h2>WhatsApp</h2></div>
   <div class="grid" style="top:250px;right:auto;width:620px;grid-template-columns:1fr;gap:14px">
-    <div class="card" style="padding:22px 28px"><div class="n">26/11</div><h3>Ex-alunos e in company: acesso antecipado</h3></div>
-    <div class="card" style="padding:22px 28px"><div class="n">27/11</div><h3>Leads da campanha: é hoje, com cupom</h3></div>
+    <div class="card" style="padding:22px 28px"><div class="n">16/11</div><h3>Base com opt-in: seu cupom já vale</h3></div>
+    <div class="card" style="padding:22px 28px"><div class="n">27/11</div><h3>Black Friday: é hoje</h3></div>
     <div class="card" style="padding:22px 28px"><div class="n">30/11</div><h3>Quem clicou e não comprou: último dia</h3></div>
   </div>
   <div style="position:absolute;left:940px;top:70px">
@@ -485,7 +552,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
 
 <!-- 29 CYBER MONDAY -->
 <div class="frame"><section class="slide cyan">
-  <div class="pad"><div class="kick" style="color:var(--cia)">Aplicações</div><h2>Cyber Monday</h2><p class="lead">Mesma estrutura, luz ciano e novas poses da Letícia.</p></div>
+  <div class="pad"><div class="kick" style="color:var(--cia)">Aplicações</div><h2>Cyber Monday</h2><p class="lead">Mesma estrutura, luz ciano e novas poses da Letícia. Na LP, entra sozinho em 30/11.</p></div>
   <div style="position:absolute;left:96px;top:300px;display:flex;gap:22px;align-items:flex-end">
     <div><img class="pic" src="assets/cyber-45-grafico.jpg" alt="Cyber Monday gráfico" style="height:450px;box-shadow:0 0 0 1px rgba(25,230,255,.5),0 0 60px rgba(25,230,255,.25)"><div class="lab">4:5 · gráfico</div></div>
     <div><img class="pic lift" src="assets/cyber-45-leticia.jpg" alt="Cyber Monday com a Letícia" style="height:450px"><div class="lab">4:5 · Letícia</div></div>
@@ -512,7 +579,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
   <div class="pad"><div class="kick">Próximos passos</div><h2>Mensuração</h2></div>
   <div class="grid" style="top:270px;grid-template-columns:repeat(5,1fr);gap:14px" id="flow"></div>
   <div class="card hi" style="position:absolute;left:96px;right:96px;top:600px;padding:26px 32px">
-    <p style="margin:0;color:#fff;font-size:22px">Matrículas e receita por canal, da peça à venda.</p>
+    <p style="margin:0;color:#fff;font-size:22px">Segmentação no RD com quem converteu na LP BLACK26. Cruzada com os pedidos: quem usou o cupom e de onde veio.</p>
   </div>
   <div class="num">31</div>
 </section></div>
@@ -533,7 +600,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
     <div class="card"><div class="n">02</div><h3>Verba</h3><p>R$ 9,9 mil, R$ 20 mil ou R$ 30 mil</p></div>
     <div class="card"><div class="n">03</div><h3>KV</h3><p>Gráfico como principal, Letícia em teste</p></div>
     <div class="card"><div class="n">04</div><h3>Calendário</h3><p>16 a 30/11</p></div>
-    <div class="card"><div class="n">05</div><h3>Cupons</h3><p>Um por público e canal</p></div>
+    <div class="card"><div class="n">05</div><h3>Mecânica</h3><p>Cupom desde 16/11. BF26LP na LP, com cadastro</p></div>
     <div class="card"><div class="n">06</div><h3>Peças</h3><p>LP, e-mail, social, anúncios, vídeo e WhatsApp</p></div>
   </div>
   <div class="num">33</div>
@@ -572,7 +639,7 @@ $('bars').innerHTML=[['BFRIDAY50','cupom geral',61],['BF50VIP','leads de anúnci
    '<span style="height:20px;border-radius:99px;background:linear-gradient(90deg,#3366FF,#7B6BFF);box-shadow:0 0 14px rgba(51,102,255,.45);width:'+(r[2]/61*100)+'%;min-width:3px"></span>'+
    '<b style="text-align:right;font:700 19px Unbounded">'+r[2]+'</b></div>'}).join('');
 
-$('fases').innerHTML=steps([['16/11','Captação','Anúncios no ar'],['23/11','Pré-anúncio','Data e oferta'],['26/11','Antecipado','Ex-alunos e in company'],['27/11','Black Friday','É hoje',1],['28 e 29/11','Prorrogação','Até domingo'],['30/11','Cyber Monday','Último dia']]);
+$('fases').innerHTML=steps([['16/11','Lançamento','Cupom liberado, e-mail para a base e anúncios no ar'],['20/11','Lembrete','Seu cupom vale até 30/11'],['24/11','Contagem','Faltam 6 dias'],['27/11','Black Friday','Dia de pico',1],['29/11','Reta final','Faltam 24 horas'],['30/11','Cyber Monday','Último dia']]);
 
 $('verba').innerHTML=[
   ['Mesma verba de 2025','R$ 9,9 mil','590 a 700','26 a 39','R$ 15,11','R$ 255 a 379'],
@@ -583,10 +650,12 @@ $('verba').innerHTML=[
    [['Leads',v[2]],['Matrículas via mídia',v[3]],['Custo por lead',v[4]],['CAC',v[5]]].map(function(k){return '<div><div class="lab" style="margin:0">'+k[0]+'</div><div style="font:600 22px Work Sans;margin-top:6px">'+k[1]+'</div></div>'}).join('')+
    '</div></div>'}).join('');
 
-$('flow').innerHTML=[['Peça','Anúncio, e-mail, post ou WhatsApp'],['Cupom','Um por público e canal'],['Pedido','Matrícula com cupom no site'],['Cruzamento','Pedido e lead no RD'],['Relatório','Matrículas e receita por canal']].map(function(x,i){
+$('flow').innerHTML=[['Origem','UTM e ID de clique na visita'],['Cadastro','Conversão LP BLACK26 no RD'],['Cupom','BF26LP ou o cupom do público'],['Pedido','Matrícula com cupom no site'],['Relatório','Quem usou, de onde veio e quanto comprou']].map(function(x,i){
   return '<div class="card"><div class="n">0'+(i+1)+'</div><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'}).join('');
 
-$('crono').innerHTML=steps([['14/10','KV','Linha visual para aprovação'],['30/10','Base','Página, réguas e cupons'],['11/11','Peças','Anúncios, vídeo, posts e selos'],['16/11','No ar','Anúncios e cupons'],['26 a 30/11','Venda','Antecipado, Black Friday e Cyber Monday',1]]);
+$('crono').innerHTML=steps([['14/10','KV','Linha visual para aprovação'],['30/10','Base','LP no WordPress, formulário RD, réguas e cupons'],['11/11','Peças','Anúncios, vídeo, posts e selos'],['16/11','No ar','Anúncios e cupons'],['26 a 30/11','Venda','Antecipado, Black Friday e Cyber Monday',1]]);
+
+document.querySelectorAll('.flowv').forEach(function(el){el.innerHTML=el.dataset.steps.split('|').map(function(t,i,a){return '<div class="st"><i>'+(i+1)+'</i>'+t+'</div>'+(i<a.length-1?'<div class="ar"></div>':'')}).join('')});
 
 /* artes */
 function post(o){
@@ -614,15 +683,16 @@ $('g191').innerHTML='<div class="art" style="width:1200px;height:628px"><div cla
   '<div class="ate" style="left:640px;top:80px;font-size:44px">ATÉ</div><div class="pct" style="left:630px;top:140px;font-size:180px">70%</div><div class="dd" style="left:640px;top:330px;font-size:62px">de desconto</div><div class="sel" style="left:640px;top:405px;font-size:32px">em cursos selecionados</div><div class="cta" style="left:640px;top:490px;font-size:28px;padding:16px 32px">Garanta seu cupom</div></div>';
 
 (function(){
-  function em(t,p,c){return '<div class="em"><div class="hd"><div class="halo" style="position:absolute;width:600px;height:600px;left:0;top:-200px"></div><div style="position:absolute;width:400px;left:100px;top:-6px"><img src="assets/lockup-t.png" alt="" style="width:100%;display:block"></div></div><div class="bd"><h4>'+t+'</h4><p>'+p+'</p><div class="cp"><small>Seu cupom</small>'+c+'</div><span class="b">Ver cursos com desconto</span>'+
-   '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px">'+['Negociação e Gestão de Conflitos','Agile Scrum Master','Storytelling e Oratória','Agile Scrum Foundation'].map(function(n){return '<div style="border:1px solid #E2E0EC;border-radius:10px;padding:12px;font-size:14px;font-weight:600">'+n+'<br><span style="color:var(--azul);font:900 15px Unbounded">até 70%</span></div>'}).join('')+'</div></div><div class="ft">Fundação Vanzolini · Descontos em cursos selecionados, de 27 a 30/11. Consulte condições.</div></div>'}
-  $('em1').innerHTML=em('27/11: até 70% de desconto em cursos selecionados.','A Black Friday da Vanzolini começa na sexta. Seu cupom vale de 27 a 30/11.','BF26BG');
-  $('em2').innerHTML=em('É hoje: até 70% de desconto.','Escolha seu curso e use o cupom no pagamento. A oferta vale até domingo.','BF26BG');
+  function cd(a){return '<div style="margin-top:20px;background:#07060C;border-radius:12px;padding:14px 16px;color:#fff;text-align:center"><div style="font:600 11px Work Sans;letter-spacing:.14em;color:#9DB3FF">TERMINA EM 30/11</div><div style="display:flex;justify-content:center;gap:8px;margin-top:8px">'+a.map(function(v){return '<div style="background:#1A1830;border-radius:8px;padding:6px 10px;min-width:64px"><div style="font:900 26px Unbounded">'+v[0]+'</div><div style="font:500 10px Work Sans;color:#A39FB8;letter-spacing:.1em">'+v[1]+'</div></div>'}).join('')+'</div></div>'}
+  function em(t,p,c,k){return '<div class="em"><div class="hd"><div class="halo" style="position:absolute;width:600px;height:600px;left:0;top:-200px"></div><div style="position:absolute;width:400px;left:100px;top:-6px"><img src="assets/lockup-t.png" alt="" style="width:100%;display:block"></div></div><div class="bd"><h4>'+t+'</h4><p>'+p+'</p>'+(k?cd(k):'')+'<div class="cp"><small>Seu cupom</small>'+c+'</div><span class="b">Ver cursos com desconto</span>'+
+   '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px">'+['Negociação e Gestão de Conflitos','Agile Scrum Master','Storytelling e Oratória','Agile Scrum Foundation'].map(function(n){return '<div style="border:1px solid #E2E0EC;border-radius:10px;padding:12px;font-size:14px;font-weight:600">'+n+'<br><span style="color:var(--azul);font:900 15px Unbounded">até 70%</span></div>'}).join('')+'</div></div><div class="ft">Fundação Vanzolini · Descontos em cursos selecionados, de 16 a 30/11. Consulte condições.</div></div>'}
+  $('em1').innerHTML=em('Seu cupom da Black Friday já vale. Aproveite.','Até 70% de desconto em cursos selecionados, de hoje até 30/11. Use o cupom no pagamento.','BF26BG',[['14','DIAS'],['08','HORAS'],['42','MIN']]);
+  $('em2').innerHTML=em('Faltam 3 dias.','Seu cupom de até 70% vale até segunda, 30/11. Escolha seu curso.','BF26BG',[['03','DIAS'],['11','HORAS'],['27','MIN']]);
 })();
 
 (function(){
   var h='';
-  [['VEM AÍ · 27/11','Post · captação','Cadastre-se'],['É HOJE','Post · Black Friday',''],['PRORROGADO','Post · prorrogação','']].forEach(function(x){
+  [['CUPOM LIBERADO','Post · lançamento',''],['É HOJE','Post · Black Friday',''],['ÚLTIMOS DIAS','Post · reta final','']].forEach(function(x){
     h+='<div><div class="lift" style="border-radius:12px;overflow:hidden"><div class="sc" style="--z:.26">'+post({chip:x[0],cta:x[2]||undefined})+'</div></div><div class="lab">'+x[1]+'</div></div>';
   });
   var cnt='<div style="position:absolute;left:80px;right:80px;top:1480px;background:#fff;border-radius:28px;padding:30px;color:#16141F;text-align:center"><div style="font:600 30px Work Sans;color:#6B6880">BLACK FRIDAY VANZOLINI</div><div style="font:900 84px Unbounded;letter-spacing:-.03em;margin-top:6px">03 : 14 : 22</div><div style="font:500 26px Work Sans;color:#6B6880">dias · horas · min</div></div>';
@@ -638,7 +708,7 @@ $('g191').innerHTML='<div class="art" style="width:1200px;height:628px"><div cla
     ['0 a 3 s','Lockup com eco',function(){return '<div class="lk" style="width:960px;left:60px;top:420px"><img src="assets/lockup-t.png" alt=""></div>'}],
     ['3 a 6 s','70% sobe e é cortado',function(){return '<div class="neon" style="right:0;top:0"></div><div class="pct" style="left:66px;top:700px;font-size:320px">70%</div><div class="cut" style="top:960px"></div>'}],
     ['6 a 9 s','Oferta',function(){return '<div class="ate" style="left:80px;top:640px;font-size:90px">ATÉ</div><div class="pct" style="left:66px;top:740px;font-size:320px">70%</div><div class="dd" style="left:80px;top:1040px;font-size:110px">de desconto</div><div class="sel" style="left:80px;top:1170px;font-size:52px">em cursos selecionados</div>'}],
-    ['9 a 12 s','Data e cupom',function(){return '<div class="dd" style="left:80px;top:660px;font-size:130px">27 a 30<br>de novembro</div><div class="cupom" style="left:80px;top:1060px;font-size:60px"><small>CUPOM</small>BF26VIP</div>'}],
+    ['9 a 12 s','Data e cupom',function(){return '<div class="dd" style="left:80px;top:660px;font-size:130px">16 a 30<br>de novembro</div><div class="cupom" style="left:80px;top:1060px;font-size:60px"><small>CUPOM</small>BF26LP</div>'}],
     ['12 a 15 s','CTA e logo',function(){return '<div class="lk" style="width:860px;left:110px;top:300px"><img src="assets/lockup-t.png" alt=""></div><div class="cta" style="left:80px;right:80px;top:1220px;text-align:center;font-size:48px">Garanta seu cupom</div><img class="logo" src="assets/logo-institucional-branco.png" alt="" style="left:50%;transform:translateX(-50%);top:1500px;height:96px">'}]
   ];
   function frame(fn){return '<div class="art a916"><div class="halo" style="width:1100px;height:1100px;left:-10px;top:300px"></div>'+fn()+'</div>'}
