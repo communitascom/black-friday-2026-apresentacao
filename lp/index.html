@@ -612,11 +612,11 @@ var KS=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid
 KS.forEach(function(k){var v=novo?(Q.get(k)||""):(ls("bf26_"+k)||"");if(novo)ls("bf26_"+k,v);ORIG[k]=v;});
 var mdl=document.getElementById("mdl"),fForm=document.getElementById("mdlForm"),fOk=document.getElementById("mdlOk"),destino="#cursos",ultimoFoco=null;
 function mostrarOk(){fForm.hidden=true;fOk.hidden=false;setTimeout(function(){document.getElementById("cupomCopy").focus();},30);var g=document.getElementById("okGo");g.href=destino;g.textContent=destino==="#cursos"?"Ver cursos com desconto":"Ir para o curso";if(destino!=="#cursos"){g.target="_blank";g.rel="noopener";}else{g.removeAttribute("target");}}
-function abrir(onde,href){destino=href||"#cursos";ultimoFoco=document.activeElement;mdl.hidden=false;document.body.style.overflow="hidden";
-  if(temCupom())mostrarOk();else{fForm.hidden=false;fOk.hidden=true;setTimeout(function(){document.getElementById("fNome").focus();},50);}
+function abrir(onde,href,form){destino=href||"#cursos";ultimoFoco=document.activeElement;mdl.hidden=false;document.body.style.overflow="hidden";
+  if(temCupom()&&!form)mostrarOk();else{fForm.hidden=false;fOk.hidden=true;setTimeout(function(){document.getElementById("fNome").focus();},50);}
   track("cupom_open",{location:onde});}
 function fechar(){mdl.hidden=true;document.body.style.overflow="";if(ultimoFoco)ultimoFoco.focus();}
-document.querySelectorAll("[data-cupom]").forEach(function(b){b.addEventListener("click",function(){abrir(b.dataset.cupom);});});
+document.querySelectorAll("[data-cupom]").forEach(function(b){b.addEventListener("click",function(){abrir(b.dataset.cupom,null,true);});});
 mdl.addEventListener("click",function(e){if(e.target.closest("[data-close]"))fechar();});
 document.addEventListener("keydown",function(e){if(mdl.hidden)return;if(e.key==="Escape"){fechar();return;}
   if(e.key==="Tab"){var f=[].filter.call(mdl.querySelectorAll("button,a[href],input:not([type=hidden])"),function(x){return x.offsetParent!==null&&!x.disabled;});if(!f.length)return;
