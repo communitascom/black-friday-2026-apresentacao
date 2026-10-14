@@ -441,16 +441,16 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
 <!-- 23 LP -->
 <div class="frame"><section class="slide">
   <div class="pad" style="right:auto;width:400px"><div class="kick">Aplicações</div><h2>Landing page</h2><p class="lead" style="font-size:20px">Uma página de 16 a 30/11. Oferta, contagem, vitrine, FAQ e WhatsApp.</p>
-    <a href="https://claude.ai/artifact/Gi6MeEWPyUnAzVvuCLjDbS" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-top:34px;background:var(--azul);color:#fff;text-decoration:none;font:600 19px 'Work Sans';padding:15px 26px;border-radius:99px;box-shadow:0 0 30px rgba(51,102,255,.55)">Abrir a LP ↗</a>
-    <p class="note" style="margin-top:14px">"Garanta seu cupom" no topo e ao longo da página. Em 30/11, o layout muda sozinho para o Cyber Monday.</p>
+    <a href="lp/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-top:34px;background:var(--azul);color:#fff;text-decoration:none;font:600 19px 'Work Sans';padding:15px 26px;border-radius:99px;box-shadow:0 0 30px rgba(51,102,255,.55)">Abrir a LP ↗</a>
+    <p class="note" style="margin-top:14px">"Garanta seu cupom" abre o cadastro (nome, e-mail, celular). Depois do envio, o cupom aparece na tela e o lead entra na segmentação LP BLACK26 do RD. Em 30/11, o layout muda para o Cyber Monday.</p>
   </div>
   <div class="lift" style="position:absolute;left:540px;top:60px;width:680px;height:790px;overflow:hidden;border-radius:14px;background:#07060F">
     <div style="height:28px;background:#1A1824;display:flex;align-items:center;gap:7px;padding:0 12px"><i style="width:10px;height:10px;border-radius:50%;background:#FF5F57"></i><i style="width:10px;height:10px;border-radius:50%;background:#FEBC2E"></i><i style="width:10px;height:10px;border-radius:50%;background:#28C840"></i></div>
-    <iframe class="lpf" src="lp-prototipo.html" title="LP desktop" loading="lazy" style="border:0;width:1440px;height:1612px;transform:scale(.4722);transform-origin:0 0;pointer-events:none"></iframe>
+    <iframe class="lpf" src="lp/index.html#bf" title="LP desktop" loading="lazy" style="border:0;width:1440px;height:1612px;transform:scale(.4722);transform-origin:0 0;pointer-events:none"></iframe>
   </div>
   <div style="position:absolute;left:1256px;top:60px;width:248px">
     <div class="lift" style="height:540px;overflow:hidden;border-radius:30px;border:8px solid #1A1824;background:#07060F">
-      <iframe class="lpf" src="lp-prototipo.html" title="LP mobile" loading="lazy" style="border:0;width:390px;height:844px;transform:scale(.5949);transform-origin:0 0;pointer-events:none"></iframe>
+      <iframe class="lpf" src="lp/index.html#bf" title="LP mobile" loading="lazy" style="border:0;width:390px;height:844px;transform:scale(.5949);transform-origin:0 0;pointer-events:none"></iframe>
     </div>
     <div class="lab">Mobile</div>
   </div>
@@ -716,25 +716,32 @@ $('g191').innerHTML='<div class="art" style="width:1200px;height:628px"><div cla
   $('vplay').innerHTML='<div class="art a916">'+cenas.map(function(c,i){return '<div class="vf vf'+(i+1)+'">'+frame(c[2])+'</div>'}).join('')+'</div>';
 })();
 
-/* LP: rolagem automática dentro do protótipo, alternando Black Friday e Cyber Monday */
+/* LP: demonstração dentro da LP real — abre o "Garanta seu cupom", preenche, mostra o cupom e rola a página; alterna Black Friday e Cyber Monday */
 document.querySelectorAll('iframe.lpf').forEach(function(f){
   f.addEventListener('load',function(){
     var w,d;try{w=f.contentWindow;d=f.contentDocument}catch(e){return}
-    if(!d)return;
-    var st=d.createElement('style');st.textContent='.proto,.log,.toast{display:none!important}html,body{scrollbar-width:none}body::-webkit-scrollbar{display:none}';d.head.appendChild(st);
-    var states=['bf','cyber'],si=0,y=0,pause=90;
-    function setState(s){var b=d.querySelector('[data-set="'+s+'"]');if(b)b.click();else d.documentElement.setAttribute('data-state',s)}
-    setState(states[0]);
+    if(!d||!d.getElementById('mdl'))return;
+    var st=d.createElement('style');st.textContent='html,body{scrollbar-width:none}body::-webkit-scrollbar{display:none}';d.head.appendChild(st);
     var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(reduced)pause=1;
-    // com "reduzir movimento", avança aos saltos (uma tela a cada 2,5 s) em vez de rolar contínuo
-    setInterval(function(){
-      if(pause>0){pause--;return}
-      var max=d.documentElement.scrollHeight-w.innerHeight;
-      y+=reduced?Math.round(w.innerHeight*.8):3;
-      if(y>=max+(reduced?w.innerHeight*.8:0)){y=0;si=(si+1)%states.length;setState(states[si]);pause=reduced?1:90}
-      w.scrollTo(0,Math.min(y,max));
-    },reduced?2500:16);
+    var $=function(i){return d.getElementById(i)},states=['bf','cyber'],si=0;
+    function setState(s){d.documentElement.setAttribute('data-state',s)}
+    function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
+    function digita(el,txt){if(reduced){el.value=txt;return wait(300)}el.value='';var i=0;return new Promise(function(r){var t=setInterval(function(){el.value=txt.slice(0,++i);if(i>=txt.length){clearInterval(t);r()}},55)})}
+    function btn(){var b=d.querySelector('.hero [data-cupom]')||d.querySelector('[data-cupom]');if(b){b.classList.add('demo-press');setTimeout(function(){b.classList.remove('demo-press')},500)}}
+    var ps=d.createElement('style');ps.textContent='.demo-press{transform:scale(.94)!important;filter:brightness(1.25)!important;transition:transform .15s,filter .15s!important}';d.head.appendChild(ps);
+    function rola(){return new Promise(function(r){var y=0,max=d.documentElement.scrollHeight-w.innerHeight;var t=setInterval(function(){y+=reduced?Math.round(w.innerHeight*.8):3;w.scrollTo(0,Math.min(y,max));if(y>=max){clearInterval(t);r()}},reduced?2500:16)})}
+    async function ciclo(){
+      setState(states[si]);w.scrollTo(0,0);
+      await wait(1800);btn();await wait(450);
+      $('mdlForm').hidden=false;$('mdlOk').hidden=true;$('fNome').value=$('fEmail').value=$('fTel').value='';$('mdl').hidden=false;
+      await wait(500);await digita($('fNome'),'Ana Souza');await digita($('fEmail'),'ana@empresa.com.br');await digita($('fTel'),'(11) 98765-4321');
+      await wait(700);$('fBtn').textContent='Enviando...';await wait(900);$('fBtn').textContent='Quero meu cupom';
+      $('mdlForm').hidden=true;$('mdlOk').hidden=false;
+      await wait(3200);$('mdl').hidden=true;
+      await wait(600);await rola();await wait(1200);
+      si=(si+1)%states.length;ciclo();
+    }
+    ciclo();
   });
 });
 
