@@ -655,14 +655,15 @@ document.querySelectorAll('iframe.lpf').forEach(function(f){
     var states=['bf','cyber'],si=0,y=0,pause=90;
     function setState(s){var b=d.querySelector('[data-set="'+s+'"]');if(b)b.click();else d.documentElement.setAttribute('data-state',s)}
     setState(states[0]);
+    var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // com "reduzir movimento", avança aos saltos (uma tela a cada 2,5 s) em vez de rolar contínuo
     setInterval(function(){
-      if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
       if(pause>0){pause--;return}
       var max=d.documentElement.scrollHeight-w.innerHeight;
-      y+=3;
-      if(y>=max){y=0;si=(si+1)%states.length;setState(states[si]);pause=90}
-      w.scrollTo(0,y);
-    },16);
+      y+=reduced?Math.round(w.innerHeight*.8):3;
+      if(y>=max+(reduced?w.innerHeight*.8:0)){y=0;si=(si+1)%states.length;setState(states[si]);pause=reduced?1:90}
+      w.scrollTo(0,Math.min(y,max));
+    },reduced?2500:16);
   });
 });
 
