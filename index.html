@@ -656,6 +656,7 @@ document.querySelectorAll('iframe.lpf').forEach(function(f){
     function setState(s){var b=d.querySelector('[data-set="'+s+'"]');if(b)b.click();else d.documentElement.setAttribute('data-state',s)}
     setState(states[0]);
     var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduced)pause=1;
     // com "reduzir movimento", avança aos saltos (uma tela a cada 2,5 s) em vez de rolar contínuo
     setInterval(function(){
       if(pause>0){pause--;return}
