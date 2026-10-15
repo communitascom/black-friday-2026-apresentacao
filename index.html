@@ -264,10 +264,10 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
     </div>
     <div class="card">
       <div class="lab" style="margin:0">Novos · anúncios e redes</div>
-      <div style="display:grid;gap:18px;margin-top:22px" class="flowv" data-steps="Anúncio leva para a LP|Garanta seu cupom: nome, e-mail e telefone|Cupom BF26LP na tela e por e-mail|Compra no site"></div>
+      <div style="display:grid;gap:18px;margin-top:22px" class="flowv" data-steps="Anúncio leva para a LP|Garanta seu cupom: nome, e-mail e celular|Cupom BF26LP na tela e por e-mail; lead na segmentação LP BLACK26|Compra no site"></div>
     </div>
   </div>
-  <div class="src">Sem fase de espera: o cupom vale de 16 a 30/11. A urgência vem do prazo.</div>
+  <div class="src">Vendas liberadas em 16/11, sem fase de espera. O cupom vale até 30/11; a urgência vem do prazo.</div>
   <div class="num">10</div>
 </section></div>
 
@@ -468,7 +468,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
     <div>
       <div class="mock-lp"><div class="mock-modal">
         <b>Receba seu cupom</b>
-        <span class="mock-in">Nome</span><span class="mock-in">E-mail</span><span class="mock-in">Telefone (WhatsApp)</span>
+        <span class="mock-in">Nome</span><span class="mock-in">E-mail</span><span class="mock-in">Celular (WhatsApp)</span>
         <i class="mock-btn">Quero meu cupom</i>
       </div></div>
       <div class="lab" style="color:#9DB3FF">2 · Cadastro</div><p class="note">Vai para o RD como conversão LP BLACK26, com a origem da visita.</p>
@@ -653,7 +653,7 @@ $('verba').innerHTML=[
 $('flow').innerHTML=[['Origem','UTM e ID de clique na visita'],['Cadastro','Conversão LP BLACK26 no RD'],['Cupom','BF26LP ou o cupom do público'],['Pedido','Matrícula com cupom no site'],['Relatório','Quem usou, de onde veio e quanto comprou']].map(function(x,i){
   return '<div class="card"><div class="n">0'+(i+1)+'</div><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'}).join('');
 
-$('crono').innerHTML=steps([['14/10','KV','Linha visual para aprovação'],['30/10','Base','LP no WordPress, formulário RD, réguas e cupons'],['11/11','Peças','Anúncios, vídeo, posts e selos'],['16/11','No ar','Anúncios e cupons'],['26 a 30/11','Venda','Antecipado, Black Friday e Cyber Monday',1]]);
+$('crono').innerHTML=steps([['14/10','KV','Linha visual para aprovação'],['30/10','Base','LP no WordPress, formulário RD, réguas e cupons'],['11/11','Peças','Anúncios, vídeo, posts e selos'],['16/11','No ar','Vendas liberadas: e-mail com cupom, LP e anúncios',1],['16 a 30/11','Venda','Pico na Black Friday (27/11) e fim no Cyber Monday (30/11)']]);
 
 document.querySelectorAll('.flowv').forEach(function(el){el.innerHTML=el.dataset.steps.split('|').map(function(t,i,a){return '<div class="st"><i>'+(i+1)+'</i>'+t+'</div>'+(i<a.length-1?'<div class="ar"></div>':'')}).join('')});
 
