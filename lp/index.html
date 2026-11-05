@@ -1,6 +1,6 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <meta charset="utf-8">
-<title>Black Friday Vanzolini 2026</title>
+<title>Black Friday Vanzolini 2026 · v3 cupons</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&family=Inter+Tight:wght@400;500;600&family=Unbounded:wght@800;900&display=swap">
@@ -305,26 +305,207 @@ footer{padding-bottom:32px}
 .vsec .more button{color:#0E0F3A;border-color:#C9CDEE}
 .vsec .empty{color:#5A5F96;border-color:#C9CDEE}
 </style>
+<style>
+/* v3: três cupons por tipo de curso. A cor é do cupom (40 azul, 50 violeta, 70 neon), não da área. */
+:root{--c40:#3366FF;--c50:#7B3FF2;--c70:#D42AB5;--g70:#FF3DDB}
+[data-c="40"]{--cc:var(--c40)}[data-c="50"]{--cc:var(--c50)}[data-c="70"]{--cc:var(--c70)}
 
-<header class="site">
-  <div class="wrap">
-    <a class="logo" href="#" aria-label="Fundação Vanzolini"><img src="img/bf26-logo-fundacao-branco.png" alt="Fundação Vanzolini" style="height:52px;width:auto;display:block"></a>
-  </div>
-</header>
+/* botão de cupom: título + três extensões coloridas */
+.cpg{display:inline-flex;align-items:stretch;gap:2px;border-radius:999px;overflow:hidden;max-width:100%}
+.cpg button{white-space:nowrap!important;border:0!important;margin:0;cursor:pointer;color:#fff!important;font:700 16px/1 var(--font)!important;padding:14px 16px;transition:filter .15s ease,transform .15s ease}
+.cpg button:active{transform:translateY(1px)}
+.cpg .l{color:inherit!important;font-size:inherit!important}
+.tiers li span b{color:var(--fg)}
+.cpg .cpt{background:#fff!important;color:#0E0F3A!important;padding-inline:20px 16px}
+.cpg .cpt:hover{background:#E8EAFF!important}
+.cpg .cpv{background:var(--cc)!important;min-width:64px;display:inline-flex;align-items:baseline;justify-content:center;font-variant-numeric:tabular-nums}
+.cpg .cpv:hover{filter:brightness(1.15)}
+.cpg .cpv small{font:600 11px/1 var(--font);opacity:.85;margin-left:3px}
+.cpg.on-light .cpt{background:#0E0F3A!important;color:#fff!important}
+.cpg.on-light .cpt:hover{background:#23246A!important}
+
+/* vitrine: pílulas de cupom no lugar de Certificação/Introdutório/Presencial */
+.vsec .pill.cp{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--cc)!important;color:#0E0F3A!important;background:#fff!important}
+.vsec .pill.cp b{background:var(--cc);color:#fff;border-radius:999px;padding:3px 8px;font:700 13px/1 var(--font)}
+.vsec .pill.cp[aria-pressed="true"]{background:var(--cc)!important;color:#fff!important}
+.vsec .pill.cp[aria-pressed="true"] b{background:#fff;color:var(--cc)}
+.vsec .card{border-top-color:var(--cc)}
+.vsec .card:hover{border-color:var(--cc)}
+.vsec .area{color:#5A5F96}
+.vsec .off{background:var(--cc);font-size:14px;padding:5px 8px}
+.vsec .go{background:var(--cc)!important}
+.vsec .card:hover .go{filter:brightness(1.12)}
+.legend{font-size:15px;color:#5A5F96;margin:-6px 0 16px}
+
+/* faixa do cupom na vitrine */
+.ctaband{gap:16px 24px}
+.ctaband [data-cpg]{display:block}
+.ctaband .cpg{display:inline-flex;gap:2px}
+.ctaband .cpg .l{color:inherit!important;font-size:inherit!important}
+.tiers li span b{color:var(--fg)}
+.cpg .cpt{font-size:18px!important}
+
+/* faixa Play: título branco */
+.pl h2,.pl h3.plan-t{color:#fff!important}
+
+/* institucional: Letícia em pé com luz da Black */
+.photo.bf{width:min(400px,100%);aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:radial-gradient(60% 50% at 30% 30%,rgba(255,61,219,.45),transparent 70%),radial-gradient(60% 60% at 80% 70%,rgba(51,102,255,.55),transparent 70%),#07060F}
+.photo.bf::before{display:none}
+.photo.bf img{position:absolute;inset:auto 0 0 50%;height:100%;width:auto;max-width:none;transform:translateX(-50%);border-radius:0;mix-blend-mode:screen}
+.photo.bf .ph{position:absolute;left:14px;bottom:14px;font:600 12.5px/1.2 var(--font);color:#fff;background:rgba(7,6,15,.72);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 10px}
+
+/* faq: título colorido */
+.fhead h2{color:#fff!important}
+.fhead h2 em{font-style:normal;color:var(--g70)}
+.fl summary{color:var(--fg)!important}
+.fl details p b{color:var(--fg)}
+.tiers{list-style:none;margin:0 0 16px 40px;padding:0;display:grid;gap:8px}
+.tiers li{display:flex;gap:10px;align-items:baseline;color:var(--muted)}
+.tiers li>b{flex:none;background:var(--cc);color:#fff;border-radius:6px;padding:4px 7px;font:700 13px/1 var(--font)}
+
+/* rodapé fixo */
+.bar .wrap{gap:14px}
+.bar .cpg button{padding:12px 14px;font-size:15px!important}
+.bar .cpg .cpv{min-width:56px}
+.bar .t{flex:1}
+@media (max-width:900px){.bar .t{display:none}.bar .cpg{flex:1}.bar .cpg .cpv{flex:1}}
+@media (max-width:640px){.bar .cpg .cpt .l{display:none}.bar .cpg .cpv{min-width:0;padding-inline:8px}.bar .cpg .cpv small{display:none}.wa{font-size:0;gap:0;padding:11px 13px}.wa svg{width:22px;height:22px}}
+@media (max-width:520px){.hact .cpg .cpt .l,.ctaband .cpg .cpt .l{display:none}.ctaband .cpg{width:100%}.ctaband .cpg .cpv{flex:1}}
+
+@media (max-width:900px){.hoffer .hact{width:calc(100vw - 40px)}.hact .cpg{width:100%}.hact .cpg .cpv{flex:1}}
+@media (max-width:520px){.cpg .cpv{min-width:0}}
+/* janela: escolha e cupom na cor do cupom */
+.mdl-box{border-top:6px solid var(--cc,#3366FF)}
+.mdl-box .tag{color:var(--cc,#B9C6FF)}
+.mdl-box[data-c="70"] .tag{color:var(--g70)}
+.tierhead{display:flex;align-items:center;gap:14px;margin:6px 0 10px}
+.tierhead .big{flex:none;display:grid;place-items:center;width:88px;height:88px;border-radius:20px;background:var(--cc);color:#fff;font:900 30px/1 var(--display);letter-spacing:-.05em}
+.tierhead .big small{display:block;font:700 11px/1 var(--font);letter-spacing:.12em;margin-top:2px}
+.tierhead h2{margin:0!important}
+.tierinfo{display:grid;gap:4px;margin:0 0 6px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:15.5px;color:var(--muted)}
+.tierinfo b{color:var(--fg)}
+.pick{display:grid;gap:10px;margin-top:8px}
+.pick button{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;text-align:left;background:#0B0A1E!important;border:1.5px solid var(--line)!important;border-left:6px solid var(--cc)!important;border-radius:16px;padding:14px 16px;cursor:pointer;color:var(--fg)!important}
+.pick button:hover{border-color:var(--cc)!important}
+.pick .pp{font:900 26px/1 var(--display);letter-spacing:-.05em;color:#fff}
+.pick .pn{display:grid;gap:3px}.pick .pn b{font-size:17px}.pick .pn span{font-size:14px;color:var(--muted)}
+.pick .pa{font-size:22px;color:var(--muted)}
+.mdl-box .btn.full{background:var(--cc,#3366FF)!important}
+.cupom{border-color:var(--cc)!important}
+.cupom span{background:var(--cc)}
+.back{background:none!important;border:0!important;color:var(--muted)!important;font:600 14px/1 var(--font)!important;cursor:pointer;padding:0;margin-bottom:4px}
+.mock{position:fixed;top:10px;right:10px;z-index:90;background:#FFB547;color:#2B1A00;font:700 12px/1.2 var(--font);border-radius:8px;padding:6px 10px;max-width:260px}
+</style>
+<style>
+/* v3.1: sem tarja, logo sob o lockup, respiro no hero, número grande com OFF embaixo, recorte no institucional */
+.hlock .flogo{width:auto;height:64px;display:block;margin:4px 0 0 12px}
+@media (min-width:901px){.hoffer{padding-left:24px}.hphoto img{transform:translateX(-68%)}}
+@media (max-width:900px){.hlock .flogo{height:34px}}
+/* número + OFF empilhados (padrão em todos os lugares) */
+.cpg .cpv,.vsec .pill.cp,.vsec .off{display:inline-flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;line-height:1}
+.cpg .cpv .n,.vsec .pill.cp .n,.vsec .off .n{font:900 26px/1 var(--display);letter-spacing:-.04em}
+.cpg .cpv .o,.vsec .pill.cp .o,.vsec .off .o{font:700 10.5px/1 var(--font);letter-spacing:.14em}
+.cpg button{padding-block:10px}
+.cpg .cpv{min-width:84px;padding-inline:14px}
+.cpg .cpt{font-size:17px!important}
+.bar .cpg button{padding-block:8px}
+.bar .cpg .cpv .n{font-size:21px}.bar .cpg .cpv .o{font-size:9.5px}
+.bar .cpg .cpv{min-width:68px}
+.vsec .off{padding:7px 9px;border-radius:8px}
+.vsec .off .n{font-size:22px}
+.vsec .pill.cp{min-width:86px;padding:8px 14px;border-radius:14px;color:var(--cc)!important}
+.vsec .pill.cp[aria-pressed="true"]{color:#fff!important}
+@media (max-width:640px){.bar .cpg .cpv{min-width:0}.bar .cpg .cpv .n{font-size:18px}.cpg .cpv .n{font-size:21px}.vsec .pill.cp{flex:1;min-width:0}}
+/* institucional: Letícia recortada no fundo branco */
+.photo.cut{width:min(380px,100%);justify-self:center;align-self:end;margin-bottom:-64px}
+.photo.cut::before{display:none}
+.photo.cut img{border-radius:0;width:100%;height:auto}
+@media (max-width:860px){.photo.cut{width:min(260px,70%);margin-bottom:0;order:-1}}
+</style>
+<style>
+@media (max-width:640px){
+  .tools .search{flex:1 1 100%}
+  .vsec .pill.cp{flex:1 1 0}
+  .cpg .cpt{padding-inline:14px 12px}
+  .cpg .cpv{padding-inline:6px}
+  .cpg .cpv .n,.bar .cpg .cpv .n{font-size:18px}
+  .cpg .cpv .o,.bar .cpg .cpv .o{font-size:9px;letter-spacing:.1em}
+  .hoffer .hact{width:calc(100vw - 40px)}
+  .bar .wrap{gap:8px;padding-inline:12px}
+  .bar .cpg{min-width:0}
+}
+</style>
+<style>
+/* hero no desktop: grupo de cupons cabe na coluna do texto */
+@media (min-width:901px){
+  .hoffer .hact{width:100%;max-width:100%}
+  .hact .cpg{width:100%}
+  .hact .cpg .cpt{flex:none;font-size:15px!important;padding-inline:16px 10px}
+  .hact .cpg .cpv{flex:1 1 0;min-width:0;padding-inline:8px}
+  .hact .cpg .cpv .n{font-size:24px}
+}
+@media (min-width:901px) and (max-width:1199px){.hact .cpg .cpt .l{display:none}}
+</style>
+<style>
+/* v3.2: logo 60% maior, selo do card em uma linha, foto inteira no institucional, selo do modal maior */
+.hlock .flogo{height:102px}
+@media (max-width:900px){.hlock .flogo{height:54px}}
+.vsec .off{display:inline-block!important;flex-direction:row;font:800 15px/1 var(--font)!important;letter-spacing:.02em;padding:7px 10px!important;border-radius:8px;white-space:nowrap;color:#fff}
+.photo.frame{width:min(400px,100%);justify-self:center;align-self:center;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#07060F;box-shadow:0 30px 60px -30px rgba(14,15,58,.45)}
+.photo.frame::before{display:none}
+.photo.frame img{width:100%;height:100%;object-fit:cover;border-radius:0;display:block}
+@media (max-width:860px){.photo.frame{width:min(300px,80%);order:-1}}
+.tierhead{gap:18px}
+.tierhead .big{width:auto;min-width:132px;height:auto;padding:16px 18px;border-radius:22px;font-size:46px;letter-spacing:-.04em;gap:6px}
+.tierhead .big small{font-size:13px;letter-spacing:.2em;margin-top:0}
+@media (max-width:520px){.tierhead .big{min-width:104px;font-size:36px;padding:12px 14px}}
+</style>
+<style>.tierhead h2{font-size:26px!important;white-space:nowrap}@media (max-width:520px){.tierhead h2{font-size:21px!important}}</style>
+<style>@media (max-width:520px){.tierhead h2{white-space:normal;font-size:22px!important}.tierhead .big{min-width:96px;font-size:32px}}</style>
+<style>
+/* institucional: Letícia recortada sobre painel azul */
+.photo.blue{position:relative;width:min(400px,100%);justify-self:center;align-self:center;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:radial-gradient(70% 55% at 50% 35%,#5A86FF 0%,transparent 70%),linear-gradient(160deg,#3366FF 0%,#2244D6 100%);box-shadow:0 30px 60px -30px rgba(34,68,214,.55)}
+.photo.blue::before{display:none}
+.photo.blue img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:92%;width:auto;max-width:none;border-radius:0}
+@media (max-width:860px){.photo.blue{width:min(300px,80%);order:-1}}
+</style>
+<style>
+/* logo recortado (sem margem transparente): mesmo tamanho visual de antes */
+.hlock .flogo{height:42px;margin:34px 0 0 42px}
+@media (max-width:900px){.hlock .flogo{height:22px;margin:20px 0 0 28px}}
+/* hero: cupom descolado do texto, alinhado pela base do logo */
+@media (min-width:901px){
+  .hlock{align-self:end;padding-bottom:44px}
+  .hoffer{align-self:stretch;display:flex!important;flex-direction:column;align-items:flex-start;gap:8px;padding-bottom:44px}
+  .hoffer::before{content:"";flex:1}
+  .hoffer .hact{margin-top:32px}
+}
+</style>
+<style>
+/* institucional v3.4: box com foto nativa no azul (Letícia gerada em estúdio azul, espelhada para o texto) */
+.inst .photo.box{position:relative;width:min(440px,100%);justify-self:center;align-self:center;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#3366FF;box-shadow:0 30px 60px -30px rgba(34,68,214,.55)}
+.inst .photo.box::before{display:none}
+.inst .photo.box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;border-radius:0;max-width:none;transform:none}
+@media (max-width:860px){.inst .photo.box{width:min(340px,86%);order:-1}}
+</style>
+
+<div class="mock" role="note">Protótipo v3 para aprovação. O formulário não envia ao RD.</div>
+
 
 <section class="hero">
   <div class="wrap">
     <div class="hlock">
       <img class="lockup s-bf" src="img/bf26-lockup.png" alt="Vanzolini Black Friday"><img class="lockup s-cyber" src="img/bf26-lockup-cyber.png" alt="Cyber Monday Vanzolini" width="760" height="670">
+      <img class="flogo" src="img/bf26-logo-fundacao-branco-trim.png" alt="Fundação Vanzolini">
     </div>
     <div class="hphoto"><img class="s-bf" src="img/bf26-leticia-hero.jpg" alt="Profissional com tablet" width="800" height="1038"><img class="s-cyber" src="img/bf26-leticia-cyber.jpg" alt="" loading="lazy"></div>
     <div class="hoffer">
-      <h1 class="sr">Black Friday Vanzolini: até 70% de desconto em 56 cursos</h1>
+      <h1 class="sr">Black Friday Vanzolini: até 70% de desconto em cursos e MBAs</h1>
       <span class="tag s-bf">Black Friday · de 16 a 30/11</span>
       <span class="tag s-cyber">Cyber Monday · último dia</span>
       <div class="upto"><small>ATÉ</small><b>70%</b></div>
-      <div class="c56">de desconto<br>em 56 cursos</div>
-      <div class="hact"><button type="button" class="btn" data-cupom="hero">Garanta seu cupom</button></div>
+      <div class="c56">de desconto<br>em <span data-ncursos>60</span> cursos e MBAs</div>
+      <div class="hact" data-cpg="hero"></div>
     </div>
   </div>
 </section>
@@ -346,14 +527,14 @@ footer{padding-bottom:32px}
   <div class="tabs" role="tablist" aria-label="Áreas" id="tabs"></div>
   <div class="tools">
     <input class="search" id="q" type="search" placeholder="Buscar curso" aria-label="Buscar curso" autocomplete="off">
-    <button type="button" class="pill" data-tipo="Certificação" aria-pressed="false">Certificação</button>
-    <button type="button" class="pill" data-tipo="Introdutório" aria-pressed="false">Introdutório</button>
-    <button type="button" class="pill" data-tipo="Presencial" aria-pressed="false">Presencial</button>
+    <button type="button" class="pill cp" data-c="70" aria-pressed="false" aria-label="Filtrar cursos com 70% OFF"><span class="n">70%</span><span class="o">OFF</span></button>
+    <button type="button" class="pill cp" data-c="50" aria-pressed="false" aria-label="Filtrar cursos com 50% OFF"><span class="n">50%</span><span class="o">OFF</span></button>
+    <button type="button" class="pill cp" data-c="40" aria-pressed="false" aria-label="Filtrar cursos com 40% OFF"><span class="n">40%</span><span class="o">OFF</span></button>
   </div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" hidden>Nenhum curso encontrado. Tente outra área ou fale com nossos especialistas.</div>
   <div class="more" id="more" hidden><button type="button" id="moreBtn">Ver mais cursos</button></div>
-  <div class="ctaband"><div><b>Seu cupom de até 70% está a um clique.</b><span>Cadastre-se e receba na hora, na tela e por e-mail.</span></div><button type="button" class="btn" data-cupom="vitrine">Garanta seu cupom</button></div>
+  <div class="ctaband"><div><b>Seu cupom de até 70% está a um clique.</b><span>Escolha o desconto do seu curso e receba o cupom na hora, na tela e por e-mail.</span></div><div data-cpg="vitrine"></div></div>
 </div></section>
 
 <section class="pl" id="play" aria-labelledby="playT">
@@ -366,7 +547,7 @@ footer{padding-bottom:32px}
       <p>Microlearning no seu ritmo, com +200 horas de conteúdo e certificado.</p>
     </div>
     <ul class="chips">
-      <li>Conteúdo exclusivo</li><li>Gamificação</li><li>Aprendizagem prática</li><li>Certificação</li>
+      <li>Conteúdo exclusivo</li><li>Gamificação</li><li>Aprendizagem prática</li><li>Certificado</li>
     </ul>
     <div class="plans">
       <article class="plan">
@@ -414,66 +595,80 @@ footer{padding-bottom:32px}
         <div class="stat"><b>+200</b><span>turmas por ano, presenciais e online</span></div>
         <div class="stat"><b>+3.000</b><span>alunos formados</span></div>
       </div>
-      <button type="button" class="btn" data-cupom="institucional">Garanta seu cupom</button>
     </div>
-    <div class="photo"><img src="img/bf26-institucional.jpg" alt="Profissional com tablet" width="688" height="643"></div>
+    <div class="photo box"><img src="img/bf26-leticia-inst-azul-c.jpg" alt="Letícia, personagem da campanha" width="928" height="1152" loading="lazy"></div>
   </div>
 </section>
 
 <section class="faq wrap" aria-labelledby="faqT">
   <div class="fhead">
-    <h2 id="faqT">Dúvidas sobre a Black Friday</h2>
+    <h2 id="faqT">Dúvidas sobre a <em>Black Friday</em></h2>
     <p>Não achou sua resposta? Fale com nossos especialistas no WhatsApp.</p>
   </div>
   <div class="fl" id="faqList">
-    <details><summary><span class="fn">01.</span>Como recebo o cupom?</summary><p>Clique em "Garanta seu cupom" e informe nome, e-mail e telefone. O cupom aparece na tela e chega no seu e-mail. Na inscrição do curso, informe o cupom no campo de desconto.</p></details>
-    <details><summary><span class="fn">02.</span>O desconto vale para qualquer turma?</summary><p>Vale para as turmas dos cursos desta página com início até [data] <span class="tbc">a confirmar</span>.</p></details>
-    <details><summary><span class="fn">03.</span>Posso parcelar?</summary><p>Sim, em até 10x no cartão <span class="tbc">a confirmar</span>.</p></details>
-    <details><summary><span class="fn">04.</span>O que é o Vanzolini Play?</summary><p>É a assinatura anual de conteúdo gravado da Vanzolini, com +200 horas e certificado. Tem planos individual, para 2 e para 3 pessoas.</p></details>
-    <details><summary><span class="fn">05.</span>Os cursos têm certificado?</summary><p>Todos têm certificado da Fundação Vanzolini. Os cursos de auditor IQNet emitem também o certificado internacional IQNet.</p></details>
-    <details><summary><span class="fn">06.</span>Quero levar a Vanzolini para minha equipe. Como faço?</summary><p>Fale com o time In Company pelo WhatsApp. Há condição especial para empresas durante a Black Friday.</p></details>
+    <details open><summary><span class="fn">01.</span>Como sei qual cupom usar?</summary><p>Cada curso da lista mostra o desconto dele no selo do canto: <b>40%</b>, <b>50%</b> ou <b>70%</b>, na cor do cupom. Pegue o cupom com o mesmo valor. Ele vale para todos os cursos marcados com aquele desconto.</p></details>
+    <details><summary><span class="fn">02.</span>Como recebo o cupom?</summary><p>Clique no desconto que aparece no seu curso (40%, 50% ou 70%) e informe nome, e-mail e telefone. O cupom aparece na tela e chega no seu e-mail. Na inscrição, informe o cupom no campo de desconto.</p></details>
+    <details><summary><span class="fn">03.</span>Posso usar mais de um cupom?</summary><p>Um cupom por inscrição. Se você quer fazer cursos de grupos diferentes, pegue o cupom de cada um.</p></details>
+    <details><summary><span class="fn">04.</span>O desconto vale para qualquer turma?</summary><p>Vale para as turmas dos cursos desta página com início até [data] <span class="tbc">a confirmar</span>.</p></details>
+    <details><summary><span class="fn">05.</span>Posso parcelar?</summary><p>Sim, em até 10x no cartão <span class="tbc">a confirmar</span>.</p></details>
+    <details><summary><span class="fn">06.</span>Os cursos têm certificado?</summary><p>Todos têm certificado da Fundação Vanzolini. Os cursos de auditor IQNet emitem também o certificado internacional IQNet.</p></details>
+    <details><summary><span class="fn">07.</span>O que é o Vanzolini Play?</summary><p>É a assinatura anual de conteúdo gravado da Vanzolini, com +200 horas e certificado. Tem planos individual, para 2 e para 3 pessoas.</p></details>
+    <details><summary><span class="fn">08.</span>Quero levar a Vanzolini para minha equipe. Como faço?</summary><p>Fale com o time In Company pelo WhatsApp. Há condição especial para empresas durante a Black Friday.</p></details>
   </div>
 </section>
-
 <footer><div class="wrap"><div>Fundação Vanzolini · Oferta válida de 16 a 30/11/2026 para os cursos desta página.<br>WhatsApp <a class="ftel" href="https://wa.me/551131453717" target="_blank" rel="noopener">(11) 3145-3717</a></div><ul class="soc" aria-label="Redes sociais"><li><a href="https://wa.me/551131453717?text=Ol%C3%A1!%20Vim%20pela%20Black%20Friday%20Vanzolini" target="_blank" rel="noopener" aria-label="WhatsApp" data-rede="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a></li><li><a href="https://www.instagram.com/fundacaovanzolini/" target="_blank" rel="noopener" aria-label="Instagram" data-rede="instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3.1 0-4.1.1-4.4.2-5.7 2.5-5.8 5.8C2 8.9 2 9.3 2 12s0 3.1.1 4.1c.2 4.3 2.4 5.6 5.8 5.8 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c4.3-.2 5.6-2.5 5.8-5.8.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.2-4.3-2.4-5.6-5.8-5.8C15.1 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.7.1 3.9 1.4 4 4 .1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.6-1.3 3.9-4 4-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.7-.1-3.9-1.4-4-4-.1-1-.1-1.3-.1-4s0-3 .1-4c.1-2.6 1.3-3.9 4-4 1-.1 1.3-.1 4-.1z"/></svg></a></li><li><a href="https://www.linkedin.com/company/40540/" target="_blank" rel="noopener" aria-label="LinkedIn" data-rede="linkedin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.7 13 12.7 14.3V19h-3V9.5h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.6V19z"/></svg></a></li><li><a href="https://www.facebook.com/FVanzolini" target="_blank" rel="noopener" aria-label="Facebook" data-rede="facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a></li><li><a href="https://www.youtube.com/channel/UCt-1eEP299j6-x-v7Mi8Bhw" target="_blank" rel="noopener" aria-label="YouTube" data-rede="youtube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a></li><li><a href="https://x.com/vanzolini/" target="_blank" rel="noopener" aria-label="X" data-rede="x"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a></li></ul></div></footer>
 
 <div class="bar">
   <div class="wrap">
     <div class="t"><b>Fale com nossos especialistas</b><span>Tire dúvidas e escolha o curso certo. Seg a sex, 9h às 18h.</span></div>
-    <button type="button" class="btn barcta" data-cupom="barra">Garanta seu cupom</button><div class="mini" aria-hidden="true"><span>Termina em</span> <b><span data-cd="d">00</span>d <span data-cd="h">00</span>:<span data-cd="m">00</span>:<span data-cd="s">00</span></b></div>
-    <a class="wa" id="wa" href="https://wa.me/551131453717?text=Ol%C3%A1!%20Vim%20pela%20Black%20Friday%20Vanzolini" target="_blank" rel="noopener">
+    <div data-cpg="barra"></div>
+    <a class="wa" id="wa" href="https://wa.me/551131453717?text=Ol%C3%A1!%20Vim%20pela%20Black%20Friday%20Vanzolini" target="_blank" rel="noopener" aria-label="WhatsApp">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
       WhatsApp
     </a>
   </div>
 </div>
 
-<div class="mdl" id="mdl" hidden role="dialog" aria-modal="true" aria-labelledby="mdlT"><div class="mdl-bg" data-close></div><div class="mdl-box">
+<div class="mdl" id="mdl" hidden role="dialog" aria-modal="true" aria-labelledby="mdlT"><div class="mdl-bg" data-close></div><div class="mdl-box" id="mdlBox">
 <button type="button" class="mdl-x" data-close aria-label="Fechar">×</button>
-<div class="mdl-step" id="mdlForm"><span class="tag">Black Friday Vanzolini · até 30/11</span><h2 id="mdlT">Receba seu cupom de até 70%</h2><p>Informe seus dados. O cupom aparece aqui e chega no seu e-mail.</p>
+<div class="mdl-step" id="mdlPick"><span class="tag">Black Friday Vanzolini · até 30/11</span><h2 id="mdlT">Escolha o cupom do seu curso</h2><p>Cada curso da lista mostra o desconto dele. Pegue o cupom com o mesmo valor.</p>
+<div class="pick" id="pickList"></div></div>
+<div class="mdl-step" id="mdlForm" hidden><button type="button" class="back" id="back">← Outros cupons</button>
+<div class="tierhead"><div class="big"><span id="tPct">70%</span><small>OFF</small></div><div><span class="tag" id="tTag">Cupom BF70</span><h2 id="tNome">70% de desconto</h2></div></div>
+<div class="tierinfo" id="tInfo"></div>
 <form id="cupomForm" novalidate>
 <label for="fNome">Nome</label><input id="fNome" name="name" autocomplete="name" required>
 <label for="fEmail">E-mail</label><input id="fEmail" name="email" type="email" autocomplete="email" required>
 <label for="fTel">Celular (WhatsApp)</label><input id="fTel" name="mobile_phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" required>
+<input type="hidden" name="cf_bf26_cupom" id="h_cupom"><input type="hidden" name="cf_bf26_desconto" id="h_desconto">
 <input type="hidden" name="cf_utm_source" id="h_utm_source"><input type="hidden" name="cf_utm_medium" id="h_utm_medium"><input type="hidden" name="cf_utm_campaign" id="h_utm_campaign"><input type="hidden" name="cf_utm_content" id="h_utm_content"><input type="hidden" name="cf_utm_term" id="h_utm_term"><input type="hidden" name="cf_gclid" id="h_gclid"><input type="hidden" name="cf_fbclid" id="h_fbclid"><input type="hidden" name="cf_pagina_conversao" id="h_pagina">
 <p class="err" id="fErr" role="alert" hidden></p>
 <button type="submit" class="btn full" id="fBtn">Quero meu cupom</button>
 <p class="fine">Ao enviar, você aceita receber comunicações da Fundação Vanzolini. Você pode cancelar quando quiser.</p>
 </form></div>
-<div class="mdl-step" id="mdlOk" hidden><span class="tag">Pronto</span><h2>Seu cupom está liberado</h2>
-<button type="button" class="cupom" id="cupomCopy"><b id="cupomCode">BF26LP</b><span>Copiar</span></button>
-<p>Use no campo de desconto da inscrição. Válido até 30/11/2026, nos cursos desta página.</p><p class="sent">Você também vai receber o cupom no seu e-mail.</p>
-<a class="btn full" id="okGo" href="#cursos">Ver cursos com desconto</a></div>
+<div class="mdl-step" id="mdlOk" hidden><span class="tag" id="okTag">Pronto</span><h2>Seu cupom de <span id="okPct">70%</span> está liberado</h2>
+<button type="button" class="cupom" id="cupomCopy"><b id="cupomCode">BF70</b><span>Copiar</span></button>
+<p id="okTxt">Use no campo de desconto da inscrição. Válido até 30/11/2026.</p><p class="sent">Você também vai receber o cupom no seu e-mail.</p>
+<a class="btn full" id="okGo" href="#cursos">Ver cursos com 70%</a></div>
 </div></div>
 <script>
 (function(){
 "use strict";
-var AREAS={PES:"Pessoas e Soft Skills",PRJ:"Projetos e Agile",TEC:"IA e Tecnologia",OPE:"Operações e Processos",INO:"Inovação",NOR:"Normas ISO"};
+var AREAS={MBA:"MBAs",PES:"Pessoas e Soft Skills",PRJ:"Projetos e Agile",TEC:"IA e Tecnologia",OPE:"Operações e Processos",INO:"Inovação",NOR:"Normas ISO"};
 var U="https://vanzolini.org.br/";
-var DISC={"Introdutório":70,"Formação":60,"Certificação":50}; /* ilustrativo: até 70% */
-var AC={PES:"#E5459B",PRJ:"#3366FF",TEC:"#7B5CFF",OPE:"#00A08F",INO:"#F47A2A",NOR:"#C98A00"};
-/* [área, título, caminho, objetivo, formato, carga h, preço cheio] (preço, carga e formato ilustrativos) */
+/* cupons por tipo de curso (proposta: MBA 40, certificação internacional 50, demais 70; todos dão certificado) */
+var TIER={
+  70:{code:"BF70"},
+  50:{code:"BF50"},
+  40:{code:"BF40"}
+};
+var DISC={"Introdutório":70,"Formação":70,"Certificação":50,"MBA":40};
+/* [área, título, caminho, tipo, formato, carga h, preço cheio] (preço, carga e formato ilustrativos) */
 var RAW=[
+["MBA","MBA em Liderança, IA e Execução Estratégica","https://mba.vanzolini.org.br/mba-em-lideranca-ia-e-execucao-estrategica/","MBA","EaD híbrido",360,24900],
+["MBA","MBA em IA Aplicada à Gestão Estratégica de Projetos","https://mba.vanzolini.org.br/mba-em-ia-aplicada-gestao-projetos-vanzolini/","MBA","EaD híbrido",360,24900],
+["MBA","MBA em Engenharia da Qualidade","https://mba.vanzolini.org.br/mba-em-engenharia-da-qualidade-vanzolini/","MBA","EaD híbrido",360,24900],
+["MBA","MBA em Gestão Ágil, Inovação e Liderança","cursos/mba-em-gestao-agil-inovacao-e-lideranca/","MBA","EaD híbrido",360,24900],
 ["PES","Autoconhecimento, Liderança e Gestão de Pessoas","educacao/gestao-de-pessoas/autoconhecimento-lideranca-e-gestao-de-pessoas-2/","Formação","EaD ao vivo",24,1890],
 ["PES","Gestão de Equipes em Home Office","educacao/gestao-de-pessoas/introducao-a-gestao-de-equipes-em-home-office/","Formação","EaD ao vivo",16,1290],
 ["PES","Grupos Semi-Autônomos","educacao/gestao-de-pessoas/grupos-semi-autonomos-alinhando-autonomia-agilidade-e-produtividade-nas-organizacoes/","Formação","EaD ao vivo",16,1290],
@@ -531,21 +726,32 @@ var RAW=[
 ["NOR","IQNet ISO 9001 | Auditor Interno","cursos/iqnet-iso-9001-auditor-interno-2/","Certificação","EaD ao vivo",24,2290],
 ["NOR","IQNet ISO 9001 | Auditor Líder","cursos/iqnet-iso-9001-auditor-lider/","Certificação","Presencial",40,4490]
 ];
-function slug(s){return s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60);}
-var C=RAW.map(function(r,i){return {id:"bf26-"+String(i+1).padStart(2,"0"),area:r[0],title:r[1],url:U+r[2],tipo:r[3],formato:r[4],carga:r[5],preco:r[6],slug:slug(r[1])};});
+function slug(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60);}
+var C=RAW.map(function(r,i){return {id:"bf26-"+String(i+1).padStart(2,"0"),area:r[0],title:r[1],url:/^https?:/.test(r[2])?r[2]:U+r[2],tipo:r[3],formato:r[4],carga:r[5],preco:r[6],d:DISC[r[3]],slug:slug(r[1])};});
 var NF=new Intl.NumberFormat("pt-BR",{maximumFractionDigits:0});
 function BRL(v){return '<span class="rs">R$</span>'+NF.format(v);}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+function por(c){return Math.round(c.preco*(1-c.d/100));}
+function doTier(d){return C.filter(function(c){return c.d===d;});}
 var root=document.documentElement;
 function state(){return root.dataset.state||"bf";}
+document.querySelectorAll("[data-ncursos]").forEach(function(el){el.textContent=C.length;});
 
 /* tagueamento */
-window.dataLayer=window.dataLayer||[];var n=0;
+window.dataLayer=window.dataLayer||[];
 function track(ev,p){window.dataLayer.push(Object.assign({event:ev},p||{}));}
 function link(c){return c.url+"?utm_source=lp-black-friday&utm_medium=vitrine&utm_campaign=black-friday-2026&utm_content="+c.slug;}
 
+/* botão de cupom: título + 40 50 70 */
+document.querySelectorAll("[data-cpg]").forEach(function(box){
+  var onde=box.dataset.cpg,suf="";
+  box.innerHTML='<div class="cpg'+(box.hasAttribute("data-light")?" on-light":"")+'" role="group" aria-label="Garanta seu cupom">'+
+    '<button type="button" class="cpt" data-pick="'+onde+'"><span class="l">Garanta seu </span>cupom</button>'+
+    [40,50,70].map(function(d){return '<button type="button" class="cpv" data-c="'+d+'" data-tier="'+d+'" data-onde="'+onde+'" aria-label="Cupom de '+d+'% OFF"><span class="n">'+d+'%</span><span class="o">OFF</span></button>';}).join("")+'</div>';
+});
+
 /* vitrine */
-var PAGE=8,F={area:"",q:"",pill:""},shown=PAGE;
+var PAGE=8,F={area:"",q:"",d:0},shown=PAGE;
 var tabs=document.getElementById("tabs");
 function renderTabs(){
   tabs.innerHTML=[""].concat(Object.keys(AREAS)).map(function(k){
@@ -554,25 +760,21 @@ function renderTabs(){
   }).join("");
 }
 tabs.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(!b)return;F.area=b.dataset.a;shown=PAGE;renderTabs();render();track("filter_use",{filter_type:"area",filter_value:F.area?AREAS[F.area]:"todos"});});
-document.querySelectorAll(".pill").forEach(function(p){p.onclick=function(){
-  F.pill=F.pill===p.dataset.tipo?"":p.dataset.tipo;shown=PAGE;
-  document.querySelectorAll(".pill").forEach(function(x){x.setAttribute("aria-pressed",String(x.dataset.tipo===F.pill));});
-  render();track("filter_use",{filter_type:"objetivo",filter_value:F.pill||"todos"});};});
+function setPill(d){F.d=d;shown=PAGE;document.querySelectorAll(".pill.cp").forEach(function(x){x.setAttribute("aria-pressed",String(+x.dataset.c===F.d));});render();}
+document.querySelectorAll(".pill.cp").forEach(function(p){p.onclick=function(){setPill(F.d===+p.dataset.c?0:+p.dataset.c);track("filter_use",{filter_type:"cupom",filter_value:F.d?"BF"+F.d:"todos"});};});
 var qt;document.getElementById("q").addEventListener("input",function(e){F.q=e.target.value.trim();shown=PAGE;render();clearTimeout(qt);qt=setTimeout(function(){if(F.q)track("search",{search_term:F.q});},900);});
 document.getElementById("moreBtn").onclick=function(){shown+=PAGE;render();track("load_more",{shown:shown});};
-function nrm(s){return s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();}
+function nrm(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();}
 function list(){return C.filter(function(c){
   if(F.area&&c.area!==F.area)return false;
-  if(F.pill==="Presencial"&&c.formato!=="Presencial")return false;
-  if(F.pill&&F.pill!=="Presencial"&&c.tipo!==F.pill)return false;
+  if(F.d&&c.d!==F.d)return false;
   if(F.q&&nrm(c.title+" "+AREAS[c.area]).indexOf(nrm(F.q))<0)return false;return true;});}
 function card(c,i){
-  var d=DISC[c.tipo]||50,half=Math.round(c.preco*(1-d/100));
-  return '<a class="card" style="--ac:'+AC[c.area]+'" href="'+esc(link(c))+'" target="_blank" rel="noopener" data-id="'+c.id+'" data-pos="'+(i+1)+'">'+
-   '<div class="ctop"><span class="area">'+esc(AREAS[c.area])+'</span><span class="off">-'+d+'%</span></div>'+
+  return '<a class="card" data-c="'+c.d+'" href="'+esc(link(c))+'" target="_blank" rel="noopener" data-id="'+c.id+'" data-pos="'+(i+1)+'">'+
+   '<div class="ctop"><span class="area">'+esc(AREAS[c.area])+'</span><span class="off">'+c.d+'% OFF</span></div>'+
    '<h3>'+esc(c.title)+'</h3>'+
-   '<div class="price"><s>'+BRL(c.preco)+'</s><b>'+BRL(half)+'</b></div>'+
-   '<span class="go">'+(state()==="cyber"?'Última chance: '+d+'% OFF':'Garantir '+d+'% OFF')+'</span></a>';
+   '<div class="price"><s>'+BRL(c.preco)+'</s><b>'+BRL(por(c))+'</b></div>'+
+   '<span class="go">'+(state()==="cyber"?'Última chance: '+c.d+'% OFF':'Garantir '+c.d+'% OFF')+'</span></a>';
 }
 function render(){
   var l=list();
@@ -583,11 +785,10 @@ function render(){
 }
 document.getElementById("grid").addEventListener("click",function(e){
   var a=e.target.closest(".card");if(!a)return;var c=C.find(function(x){return x.id===a.dataset.id;});
-  track("select_item",{item_list_name:"vitrine",items:[{item_id:c.id,item_name:c.title,item_category:AREAS[c.area],price:Math.round(c.preco*(1-(DISC[c.tipo]||50)/100)),discount_pct:DISC[c.tipo]||50,coupon:CUPOM,index:+a.dataset.pos}]});
-  if(!temCupom()){e.preventDefault();abrir("card",a.href);}
+  track("select_item",{item_list_name:"vitrine",items:[{item_id:c.id,item_name:c.title,item_category:AREAS[c.area],price:por(c),discount_pct:c.d,coupon:TIER[c.d].code,index:+a.dataset.pos}]});
+  if(!temCupom(c.d)){e.preventDefault();abrir(c.d,"card",a.href);}
 });
 
-/* hero */
 function toast(m){var t=document.createElement("div");t.className="toast";t.setAttribute("role","status");t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove();},1800);}
 document.querySelectorAll("#faqList details").forEach(function(d){d.addEventListener("toggle",function(){if(d.open)track("faq_open",{question:d.querySelector("summary").textContent.replace(/^\d+\./,"").trim()});});});
 document.querySelectorAll("[data-plan]").forEach(function(a){a.addEventListener("click",function(){track("select_item",{item_list_name:"vanzolini-play",items:[{item_id:"play-"+a.dataset.plan.toLowerCase(),item_name:a.dataset.plan,item_category:"Vanzolini Play",price:+a.dataset.total}]});});});
@@ -595,44 +796,68 @@ document.getElementById("wa").addEventListener("click",function(){track("whatsap
 
 /* contador */
 var T={live:new Date("2026-11-30T23:59:59-03:00"),cyber:new Date("2026-11-30T00:00:00-03:00")};
-function tick(){var s=state(),diff;
-  diff=Math.max(0,T.live-Date.now());
+function tick(){var diff=Math.max(0,T.live-Date.now());
   var p=function(x){return String(x).padStart(2,"0");};
   var v={d:Math.floor(diff/864e5),h:Math.floor(diff/36e5)%24,m:Math.floor(diff/6e4)%60,s:Math.floor(diff/1e3)%60};
   document.querySelectorAll("[data-cd]").forEach(function(el){el.textContent=p(v[el.dataset.cd]);});}
 setInterval(tick,1000);
-
 function setState(s){root.dataset.state=s;render();tick();}
 
-/* cupom: janela de cadastro e envio ao RD Station (conversão "LP BLACK26") */
-var CUPOM="BF26LP",RD_TOKEN="9ee55f4bbde6b5c2e898465e9bcd0f09",RD_ID="LP BLACK26";
+/* cupom: escolha do grupo, cadastro e envio ao RD Station.
+   No RD: mesma conversão "LP BLACK26" para os três, com cf_bf26_cupom (BF40/BF50/BF70) e cf_bf26_desconto (40/50/70). */
+var SIMULA=true; /* protótipo: não envia ao RD */
+var RD_TOKEN="9ee55f4bbde6b5c2e898465e9bcd0f09",RD_ID="LP BLACK26";
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
-var jaTem=false;function temCupom(){return jaTem||ls("bf26_cupom")==="1";}
+var ja={};function temCupom(d){return ja[d]||ls("bf26_cupom_"+d)==="1";}
 var Q=new URLSearchParams(location.search),ORIG={};
 var KS=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"],novo=KS.some(function(k){return Q.get(k);});
 KS.forEach(function(k){var v=novo?(Q.get(k)||""):(ls("bf26_"+k)||"");if(novo)ls("bf26_"+k,v);ORIG[k]=v;});
-var mdl=document.getElementById("mdl"),fForm=document.getElementById("mdlForm"),fOk=document.getElementById("mdlOk"),destino="#cursos",ultimoFoco=null;
-function mostrarOk(){fForm.hidden=true;fOk.hidden=false;setTimeout(function(){document.getElementById("cupomCopy").focus();},30);var g=document.getElementById("okGo");g.href=destino;g.textContent=destino==="#cursos"?"Ver cursos com desconto":"Ir para o curso";if(destino!=="#cursos"){g.target="_blank";g.rel="noopener";}else{g.removeAttribute("target");}}
-function abrir(onde,href,form){destino=href||"#cursos";ultimoFoco=document.activeElement;mdl.hidden=false;document.body.style.overflow="hidden";
-  if(temCupom()&&!form)mostrarOk();else{fForm.hidden=false;fOk.hidden=true;setTimeout(function(){document.getElementById("fNome").focus();},50);}
-  track("cupom_open",{location:onde});}
+var mdl=document.getElementById("mdl"),box=document.getElementById("mdlBox"),sPick=document.getElementById("mdlPick"),sForm=document.getElementById("mdlForm"),sOk=document.getElementById("mdlOk"),destino="#cursos",ultimoFoco=null,atual=70,origem="";
+
+document.getElementById("pickList").innerHTML=[70,50,40].map(function(d){var l=doTier(d),min=Math.min.apply(null,l.map(por));
+  return '<button type="button" data-c="'+d+'" data-tier="'+d+'" data-onde="escolha"><span class="pp">'+d+'%</span><span class="pn"><b>Cupom '+TIER[d].code+'</b><span>'+l.length+' cursos marcados com '+d+'%</span></span><span class="pa" aria-hidden="true">›</span></button>';}).join("");
+
+function passo(el){[sPick,sForm,sOk].forEach(function(s){s.hidden=s!==el;});}
+function preencher(d){atual=d;var t=TIER[d],l=doTier(d),min=Math.min.apply(null,l.map(por));
+  box.dataset.c=d;
+  document.getElementById("tPct").textContent=d+"%";
+  document.getElementById("tTag").textContent="Cupom "+t.code;
+  document.getElementById("tNome").textContent=d+"% de desconto";
+  document.getElementById("tInfo").innerHTML='<span>Vale para os <b>'+l.length+' cursos marcados com '+d+'%</b> na lista.</span>';
+  document.getElementById("h_cupom").value=t.code;document.getElementById("h_desconto").value=d;
+  document.getElementById("cupomCode").textContent=t.code;
+  document.getElementById("okPct").textContent=d+"%";
+  document.getElementById("okTag").textContent="Pronto";
+  document.getElementById("okTxt").textContent="Use no campo de desconto da inscrição. Válido até 30/11/2026 nos cursos marcados com "+d+"%.";
+}
+function mostrarOk(){passo(sOk);setTimeout(function(){document.getElementById("cupomCopy").focus();},30);var g=document.getElementById("okGo");g.href=destino;
+  if(destino==="#cursos"){g.textContent="Ver cursos com "+atual+"%";g.removeAttribute("target");}else{g.textContent="Ir para o curso";g.target="_blank";g.rel="noopener";}}
+function abrirModal(){ultimoFoco=document.activeElement;mdl.hidden=false;document.body.style.overflow="hidden";}
+function abrir(d,onde,href){destino=href||"#cursos";origem=onde;if(mdl.hidden)abrirModal();preencher(d);
+  if(temCupom(d)&&href)mostrarOk();else{passo(sForm);setTimeout(function(){document.getElementById("fNome").focus();},50);}
+  track("cupom_open",{location:onde,coupon:TIER[d].code});}
+function escolher(onde){destino="#cursos";origem=onde;delete box.dataset.c;abrirModal();passo(sPick);setTimeout(function(){sPick.querySelector("button").focus();},50);track("cupom_open",{location:onde,coupon:"escolha"});}
 function fechar(){mdl.hidden=true;document.body.style.overflow="";if(ultimoFoco)ultimoFoco.focus();}
-document.querySelectorAll("[data-cupom]").forEach(function(b){b.addEventListener("click",function(){abrir(b.dataset.cupom,null,true);});});
+document.addEventListener("click",function(e){
+  var p=e.target.closest("[data-pick]");if(p){escolher(p.dataset.pick);return;}
+  var t=e.target.closest("[data-tier]");if(t){abrir(+t.dataset.tier,t.dataset.onde==="escolha"?origem:t.dataset.onde);}
+});
+document.getElementById("back").onclick=function(){delete box.dataset.c;passo(sPick);};
 mdl.addEventListener("click",function(e){if(e.target.closest("[data-close]"))fechar();});
 document.addEventListener("keydown",function(e){if(mdl.hidden)return;if(e.key==="Escape"){fechar();return;}
   if(e.key==="Tab"){var f=[].filter.call(mdl.querySelectorAll("button,a[href],input:not([type=hidden])"),function(x){return x.offsetParent!==null&&!x.disabled;});if(!f.length)return;
     var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}});
-document.getElementById("okGo").addEventListener("click",function(){if(destino==="#cursos")fechar();});
-document.getElementById("cupomCopy").onclick=function(){var ok=function(){toast("Cupom "+CUPOM+" copiado");track("coupon_copy",{coupon:CUPOM});};
+document.getElementById("okGo").addEventListener("click",function(){if(destino==="#cursos"){fechar();F.area="";renderTabs();setPill(atual);}});
+document.getElementById("cupomCopy").onclick=function(){var code=TIER[atual].code,ok=function(){toast("Cupom "+code+" copiado");track("coupon_copy",{coupon:code});};
   var falhou=function(){var r=document.createRange();r.selectNodeContents(document.getElementById("cupomCode"));var sel=getSelection();sel.removeAllRanges();sel.addRange(r);toast("Copie o cupom selecionado");};
-  try{navigator.clipboard.writeText(CUPOM).then(ok,falhou);}catch(e){falhou();}};
+  try{navigator.clipboard.writeText(code).then(ok,falhou);}catch(e){falhou();}};
 var tel=document.getElementById("fTel");
 tel.addEventListener("input",function(){var v=tel.value.replace(/\D/g,"");if(v.length>11&&v.indexOf("55")===0)v=v.slice(2);v=v.slice(0,11);tel.value=v.length>10?"("+v.slice(0,2)+") "+v.slice(2,7)+"-"+v.slice(7):v.length>6?"("+v.slice(0,2)+") "+v.slice(2,6)+"-"+v.slice(6):v.length>2?"("+v.slice(0,2)+") "+v.slice(2):v;});
 function rdTrack(){var m=document.cookie.match(/(?:^|; )rdtrk=([^;]+)/);if(!m)return "";try{return JSON.parse(decodeURIComponent(m[1])).id||"";}catch(e){return "";}}
 document.getElementById("cupomForm").addEventListener("submit",function(e){
   e.preventDefault();
   var nome=document.getElementById("fNome"),mail=document.getElementById("fEmail"),err=document.getElementById("fErr"),btn=document.getElementById("fBtn");
-  var fone=tel.value.replace(/\D/g,""),msg="";
+  var fone=tel.value.replace(/\D/g,""),msg="",d=atual,code=TIER[d].code;
   [nome,mail,tel].forEach(function(x){x.removeAttribute("aria-invalid");});
   if(nome.value.trim().length<2){msg="Informe seu nome.";nome.setAttribute("aria-invalid","true");}
   else if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail.value.trim())){msg="Informe um e-mail válido.";mail.setAttribute("aria-invalid","true");}
@@ -640,6 +865,7 @@ document.getElementById("cupomForm").addEventListener("submit",function(e){
   if(msg){err.textContent=msg;err.hidden=false;return;}
   err.hidden=true;btn.disabled=true;btn.textContent="Enviando...";
   var p={conversion_identifier:RD_ID,name:nome.value.trim(),email:mail.value.trim(),mobile_phone:"+55"+fone,
+    cf_bf26_cupom:code,cf_bf26_desconto:String(d),
     cf_utm_source:ORIG.utm_source,cf_utm_medium:ORIG.utm_medium,cf_utm_campaign:ORIG.utm_campaign,cf_utm_content:ORIG.utm_content,cf_utm_term:ORIG.utm_term,
     cf_gclid:ORIG.gclid,cf_fbclid:ORIG.fbclid,cf_pagina_conversao:location.origin+location.pathname,
     cf_campanha_origem:ORIG.utm_campaign,cf_canal:[ORIG.utm_source,ORIG.utm_medium].filter(Boolean).join(" / "),
@@ -647,10 +873,11 @@ document.getElementById("cupomForm").addEventListener("submit",function(e){
     traffic_medium:ORIG.utm_medium,traffic_campaign:ORIG.utm_campaign,traffic_value:ORIG.utm_term,
     client_tracking_id:rdTrack(),available_for_mailing:true};
   Object.keys(p).forEach(function(k){if(p[k]==="")delete p[k];});
-  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"].forEach(function(k){var h=document.getElementById("h_"+k);if(h)h.value=ORIG[k];});
+  KS.forEach(function(k){var h=document.getElementById("h_"+k);if(h)h.value=ORIG[k];});
   document.getElementById("h_pagina").value=p.cf_pagina_conversao;
-  var feito=false,fim=function(ok){if(feito)return;feito=true;clearTimeout(tm);jaTem=true;ls("bf26_cupom","1");document.querySelector("#mdlOk .sent").textContent=ok?"Você também vai receber o cupom no seu e-mail.":"Guarde o cupom: anote ou copie agora.";track(ok?"generate_lead":"generate_lead_error",{form_id:"lp-black26",coupon:CUPOM});btn.disabled=false;btn.textContent="Quero meu cupom";mostrarOk();};
-  var ac=window.AbortController?new AbortController():null,tm=setTimeout(function(){if(ac)ac.abort();fim(false);},8000);
+  var feito=false,tm,fim=function(ok){if(feito)return;feito=true;clearTimeout(tm);ja[d]=true;ls("bf26_cupom_"+d,"1");document.querySelector("#mdlOk .sent").textContent=ok?"Você também vai receber o cupom no seu e-mail.":"Guarde o cupom: anote ou copie agora.";track(ok?"generate_lead":"generate_lead_error",{form_id:"lp-black26",coupon:code,discount_pct:d,location:origem});btn.disabled=false;btn.textContent="Quero meu cupom";mostrarOk();};
+  if(SIMULA){console.log("[protótipo] payload RD",p);setTimeout(function(){fim(true);},500);return;}
+  var ac=window.AbortController?new AbortController():null;tm=setTimeout(function(){if(ac)ac.abort();fim(false);},8000);
   fetch("https://api.rd.services/platform/conversions?api_key="+encodeURIComponent(RD_TOKEN),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({event_type:"CONVERSION",event_family:"CDP",payload:p}),signal:ac?ac.signal:undefined})
     .then(function(r){fim(r.ok);}).catch(function(){fim(false);});
 });
