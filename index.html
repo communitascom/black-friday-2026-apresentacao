@@ -263,7 +263,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
     <div class="lab" style="margin:0">Desconto</div>
     <div style="font:900 200px/.85 Unbounded;letter-spacing:-.06em;margin-top:20px" class="blue">70%</div>
     <p style="font:600 34px 'Work Sans';margin-top:20px">até, em três faixas</p>
-    <p class="note" style="margin-top:26px">Válidos de 16 a 30/11, com contagem regressiva até o fim.</p>
+    <p class="note" style="margin-top:26px">Válidos de 16 a 30/11. A urgência fica para a reta final.</p>
   </div>
   <div class="grid" style="left:720px;top:250px;grid-template-columns:1fr;gap:18px">
     <div class="cp3 c70"><div class="pc">70%<small>OFF</small></div><h3>Cursos de curta duração</h3><code>BF70</code></div>
@@ -280,7 +280,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
   <div class="grid" style="top:240px;grid-template-columns:1fr 1fr;gap:28px">
     <div class="card hi">
       <div class="lab" style="margin:0;color:#9DB3FF">Base · e-mail e WhatsApp</div>
-      <div style="display:grid;gap:18px;margin-top:22px" class="flowv" data-steps="E-mail de lançamento em 16/11|Até 70% OFF, com os 3 cupons no e-mail|Botão leva para a LP|Régua com contador até 30/11"></div>
+      <div style="display:grid;gap:18px;margin-top:22px" class="flowv" data-steps="E-mail de lançamento em 16/11|Até 70% OFF, com os 3 cupons no e-mail|Botão leva para a LP|Régua de 6 envios até 30/11"></div>
     </div>
     <div class="card">
       <div class="lab" style="margin:0">Novos · anúncios e redes</div>
@@ -360,10 +360,10 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
     <table class="t" style="font-size:22px">
       <tr><th style="width:320px">Fase</th><th>Chamada</th></tr>
       <tr><td class="k">Lançamento · 16/11</td><td>Black Friday Vanzolini: <b class="blue">até 70% OFF</b> em cursos selecionados.</td></tr>
-      <tr><td class="k">Lembrete · 20/11</td><td>Você ainda tem 10 dias para usar <b class="blue">até 70% OFF</b>.</td></tr>
-      <tr><td class="k">Contagem · 24/11</td><td>Faltam 6 dias, e o curso pode custar <b class="blue">até 70% menos</b>.</td></tr>
+      <tr><td class="k">Acesso antecipado · 20/11</td><td>Você está entre os primeiros a usar <b class="blue">até 70% OFF</b>.</td></tr>
+      <tr><td class="k">Vagas limitadas · 24/11</td><td>Alguns cursos com <b class="blue">até 70% OFF</b> têm vagas limitadas.</td></tr>
       <tr><td class="k">Black Friday · 27/11</td><td>É hoje: o curso que você adiou está com <b class="blue">até 70% OFF</b>.</td></tr>
-      <tr><td class="k">Reta final · 29/11</td><td>Faltam 24 horas para o <b class="blue">até 70% OFF</b>.</td></tr>
+      <tr><td class="k">Reta final · 29/11</td><td>Faltam 24 horas, e alguns cursos têm vagas limitadas.</td></tr>
       <tr><td class="k">Cyber Monday · 30/11</td><td>Cyber Monday: últimas horas de <b class="blue">até 70% OFF</b>.</td></tr>
     </table>
   </div>
@@ -529,7 +529,7 @@ table.t code{font:600 17px "Work Sans";background:rgba(51,102,255,.18);color:#AF
 <div class="frame"><section class="slide">
   <div class="pad" style="right:auto;width:380px"><div class="kick">Aplicações</div><h2>E-mails</h2><p class="lead" style="font-size:20px">Mesma identidade, hero diferente em cada envio, três botões nas cores dos cupons.</p>
     <a class="btnx" href="emails/" target="_blank" rel="noopener" style="margin-top:30px">Ver os 6 layouts ↗</a>
-    <p class="note" style="margin-top:18px">O RD não tem contador nativo: a contagem entra como GIF em cada disparo.</p></div>
+    <p class="note" style="margin-top:18px">A faixa de urgência (contagem) entra só no E5 e no E6, como GIF. Nos demais, sem data no topo. O contato é pelo WhatsApp, sem “responda este e-mail”.</p></div>
   <div style="position:absolute;left:520px;top:56px;display:flex;gap:26px">
     <div><div class="lift" style="width:312px;height:740px;overflow:hidden;border-radius:10px;background:#ECEBF3"><iframe src="emails/e1-lancamento.html" title="E-mail 1" loading="lazy" style="border:0;width:624px;height:1480px;transform:scale(.5);transform-origin:0 0;pointer-events:none"></iframe></div><div class="lab">E1 · 16/11 · Lançamento</div></div>
     <div><div class="lift" style="width:312px;height:740px;overflow:hidden;border-radius:10px;background:#ECEBF3"><iframe src="emails/e4-black-friday.html" title="E-mail 4" loading="lazy" style="border:0;width:624px;height:1480px;transform:scale(.5);transform-origin:0 0;pointer-events:none"></iframe></div><div class="lab">E4 · 27/11 · Black Friday</div></div>
@@ -679,7 +679,7 @@ $('bars').innerHTML=[['BFRIDAY50','cupom geral',61],['BF50VIP','leads de anúnci
    '<span style="height:20px;border-radius:99px;background:linear-gradient(90deg,#3366FF,#7B6BFF);box-shadow:0 0 14px rgba(51,102,255,.45);width:'+(r[2]/61*100)+'%;min-width:3px"></span>'+
    '<b style="text-align:right;font:700 19px Unbounded">'+r[2]+'</b></div>'}).join('');
 
-$('fases').innerHTML=steps([['16/11','Lançamento','Cupom liberado, e-mail para a base e anúncios no ar'],['20/11','Lembrete','Seu cupom vale até 30/11'],['24/11','Contagem','Faltam 6 dias'],['27/11','Black Friday','Dia de pico',1],['29/11','Reta final','Faltam 24 horas'],['30/11','Cyber Monday','Último dia']]);
+$('fases').innerHTML=steps([['16/11','Lançamento','Cupom liberado, e-mail para a base e anúncios no ar'],['20/11','Acesso antecipado','Cupom ativo e vagas limitadas em alguns cursos'],['24/11','Vagas limitadas','Garanta a sua antes da Black Friday'],['27/11','Black Friday','Dia da Black Friday',1],['29/11','Reta final','Faltam 24 horas, com vagas limitadas'],['30/11','Cyber Monday','Último dia']]);
 
 $('verba').innerHTML=[
   ['Mesma verba de 2025','R$ 9,9 mil','590 a 700','26 a 39','R$ 15,11','R$ 255 a 379'],
@@ -723,9 +723,9 @@ $('g191').innerHTML='<div class="art" style="width:1200px;height:628px"><div cla
   '<div class="ate" style="left:640px;top:80px;font-size:44px">ATÉ</div><div class="pct" style="left:630px;top:140px;font-size:180px">70%</div><div class="dd" style="left:640px;top:330px;font-size:62px">de desconto</div><div class="sel" style="left:640px;top:405px;font-size:32px">em cursos selecionados</div><div class="cta" style="left:640px;top:490px;font-size:28px;padding:16px 32px">Garanta seu cupom</div></div>';
 
 $('emfluxo').innerHTML=[
-  ['16/11','E1 · Lançamento','Seu cupom já vale, e o desconto chega a 70% OFF','Todos: base geral, segmentada, ex-alunos e in company'],
-  ['20/11','E2 · Lembrete','Você ainda tem 10 dias para usar até 70% OFF','Duas versões: pegue o cupom / use o cupom'],
-  ['24/11','E3 · Contagem','Faltam 6 dias, e o curso pode custar até 70% menos','Quem abriu ou clicou'],
+  ['16/11','E1 · Lançamento','Seu cupom está ativo, e o desconto chega a 70% OFF','Todos: base geral, segmentada, ex-alunos e in company'],
+  ['20/11','E2 · Acesso antecipado','Você está entre os primeiros a usar até 70% OFF','Duas versões: pegue o cupom / use o cupom'],
+  ['24/11','E3 · Vagas limitadas','Alguns cursos com até 70% OFF têm vagas limitadas','Quem abriu ou clicou'],
   ['27/11','E4 · Black Friday','O curso que você adiou está com até 70% OFF hoje','Engajados 90 dias, com WhatsApp',1],
   ['29/11','E5 · Reta final','Amanhã o cupom acaba, e o até 70% OFF vai junto','Abriu ou clicou, sem quem já se matriculou'],
   ['30/11','E6 · Cyber Monday','Cyber Monday: últimas horas de até 70% OFF','Engajados 90 dias']].map(function(x){
