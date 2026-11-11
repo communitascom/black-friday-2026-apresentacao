@@ -1,37 +1,451 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BF 2026 · E-mails por público</title><style>body{font:16px/1.5 Arial,Helvetica,sans-serif;margin:0;background:#07060F;color:#fff}main{max-width:820px;margin:0 auto;padding:32px 20px}h1{font-size:26px}h2{font-size:19px;margin:30px 0 4px}p{margin:0 0 10px;color:#B9B6CC;font-size:14px}a{color:#9DB3FF}li{margin:4px 0}</style></head><body><main><h1>BF 2026 · E-mails por público</h1><p>Versões para subir no RD, uma pasta por público, cada uma com UTM própria. <a href="index.html">Ver os 6 layouts da apresentação</a></p>
-<h2>1 · Geral, lead da campanha</h2><p>Quem se cadastrou na LP. utm_term=lead-campanha</p><ul>
-<li><a href="01-geral-campanha/e1-lancamento.html">e1-lancamento</a> · Seu cupom está ativo, e o desconto chega a 70% OFF</li>
-<li><a href="01-geral-campanha/e2-lembrete.html">e2-lembrete</a> · Você está entre os primeiros a usar até 70% OFF</li>
-<li><a href="01-geral-campanha/e3-contagem.html">e3-contagem</a> · Alguns cursos com até 70% OFF têm vagas limitadas</li>
-<li><a href="01-geral-campanha/e4-black-friday.html">e4-black-friday</a> · O curso que você adiou está com até 70% OFF hoje</li>
-<li><a href="01-geral-campanha/e5-reta-final.html">e5-reta-final</a> · Amanhã o cupom acaba, e o até 70% OFF vai junto</li>
-<li><a href="01-geral-campanha/e6-cyber-monday.html">e6-cyber-monday</a> · Cyber Monday: últimas horas de até 70% OFF</li>
-</ul>
-<h2>2 · Geral, base</h2><p>Base geral do RD. utm_term=base-geral</p><ul>
-<li><a href="02-geral-base/e1-lancamento.html">e1-lancamento</a> · Seu cupom está ativo, e o desconto chega a 70% OFF</li>
-<li><a href="02-geral-base/e2-lembrete.html">e2-lembrete</a> · Você está entre os primeiros a usar até 70% OFF</li>
-<li><a href="02-geral-base/e3-contagem.html">e3-contagem</a> · Alguns cursos com até 70% OFF têm vagas limitadas</li>
-<li><a href="02-geral-base/e4-black-friday.html">e4-black-friday</a> · O curso que você adiou está com até 70% OFF hoje</li>
-<li><a href="02-geral-base/e5-reta-final.html">e5-reta-final</a> · Amanhã o cupom acaba, e o até 70% OFF vai junto</li>
-<li><a href="02-geral-base/e6-cyber-monday.html">e6-cyber-monday</a> · Cyber Monday: últimas horas de até 70% OFF</li>
-</ul>
-<h2>3 · Segmentados</h2><p>Texto reforça o curso de interesse. utm_term=base-segmentada</p><ul>
-<li><a href="03-segmentados/e1-lancamento.html">e1-lancamento</a> · Já está sabendo? Aquele curso que você viu está com desconto</li>
-<li><a href="03-segmentados/e2-lembrete.html">e2-lembrete</a> · Você chegou antes ao desconto do curso que te interessou</li>
-<li><a href="03-segmentados/e3-contagem.html">e3-contagem</a> · O curso que te interessou pode ter vagas limitadas</li>
-<li><a href="03-segmentados/e4-black-friday.html">e4-black-friday</a> · O curso em que você demonstrou interesse está com até 70% OFF hoje</li>
-<li><a href="03-segmentados/e5-reta-final.html">e5-reta-final</a> · Amanhã acaba o desconto do curso que te interessou</li>
-<li><a href="03-segmentados/e6-cyber-monday.html">e6-cyber-monday</a> · Cyber Monday: últimas horas do curso que te interessou</li>
-</ul>
-<h2>4 · Ex-alunos</h2><p>Texto para ex-alunos. utm_term=ex-alunos</p><ul>
-<li><a href="04-ex-alunos/e1-lancamento.html">e1-lancamento</a> · Ex-aluno Vanzolini, seu cupom está ativo, com até 70% OFF</li>
-<li><a href="04-ex-alunos/e2-lembrete.html">e2-lembrete</a> · Ex-aluno, você está entre os primeiros a usar até 70% OFF</li>
-<li><a href="04-ex-alunos/e3-contagem.html">e3-contagem</a> · Ex-aluno, alguns cursos com até 70% OFF têm vagas limitadas</li>
-<li><a href="04-ex-alunos/e4-black-friday.html">e4-black-friday</a> · Ex-aluno, o curso que você adiou está com até 70% OFF hoje</li>
-<li><a href="04-ex-alunos/e5-reta-final.html">e5-reta-final</a> · Ex-aluno, amanhã o cupom acaba, e o até 70% OFF vai junto</li>
-<li><a href="04-ex-alunos/e6-cyber-monday.html">e6-cyber-monday</a> · Ex-aluno, Cyber Monday: últimas horas de até 70% OFF</li>
-</ul>
-<h2>5 · Lista VIP</h2><p>Alunos e ex-alunos, convite para o cadastro. utm_term=lista-vip</p><ul>
-<li><a href="05-lista-vip/e0-lista-vip.html">e0-lista-vip</a> · Você está na lista VIP da Black Friday e vai receber o cupom antes</li>
-</ul>
-</main></body></html>
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BF 2026 · E-mails por público</title>
+<style>
+:root{--bg:#F4F3F8;--ink:#16141F;--mut:#6B6880;--line:#DEDCE8;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#07060F;color:#fff;padding:12px 24px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header h1{font-size:16px;margin:0;font-weight:700}
+.pbs{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.pb,.tg button{background:#14122A;color:#C9D4FF;border:1px solid #2E2B4A;border-radius:999px;font-size:13px;padding:5px 12px;cursor:pointer}
+.pb:hover{background:#1B1838}
+.pb.on,.tg button.on{background:#3D66FF;color:#fff;border-color:#3D66FF}
+.tg{display:flex;gap:4px}
+main{max-width:1180px;margin:0 auto;padding:24px 16px 80px}
+.intro{color:var(--mut);font-size:14px;line-height:21px;margin:0 0 14px;max-width:760px}
+.intro b{color:var(--ink)}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#E8E6F2;border-radius:4px;padding:1px 5px}
+.sub{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 20px}
+.sub a{color:#2A47C9;text-decoration:none;font-size:13px;padding:5px 12px;border:1px solid #C9D4FF;background:#fff;border-radius:999px}
+.sub a:hover{background:#EAF0FF}
+.card{display:grid;grid-template-columns:320px 1fr;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:24px;scroll-margin-top:70px}
+.tag{display:inline-block;background:#07060F;color:#fff;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.5px;padding:5px 12px;margin-bottom:14px}
+dl{margin:0}dt{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);font-weight:700;margin-top:14px}
+dd{margin:3px 0 0;font-size:14px;line-height:21px}.m{color:var(--mut)}.cnt{text-transform:none;letter-spacing:0;font-weight:400}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:18px;word-break:break-all}
+.mono a{color:#2A47C9}
+.frame{display:flex;justify-content:center;background:#ECEBF3;border-radius:12px;padding:16px}
+iframe.mail{border:0;width:624px;max-width:100%;background:#ECEBF3;display:block;height:1800px}
+body.mob iframe.mail{width:375px}
+@media(max-width:900px){.card{grid-template-columns:1fr}}
+</style></head><body>
+<header><h1>BF 2026 · E-mails por público</h1><div class="pbs"><button class="pb" data-p="01-geral-campanha">Geral · campanha</button><button class="pb" data-p="02-geral-base">Geral · base</button><button class="pb" data-p="03-segmentados">Segmentados</button><button class="pb" data-p="04-ex-alunos">Ex-alunos</button><button class="pb" data-p="05-lista-vip">Lista VIP</button></div>
+<div class="tg"><button class="on" data-w="d">Computador</button><button data-w="m">Celular</button></div></header>
+<main>
+<div class="pub" id="pub-01-geral-campanha" hidden>
+<p class="intro"><b>Geral · campanha.</b> Leads que se cadastraram na LP. Todos os links levam para a LP, com <code>utm_term=lead-campanha</code>.</p>
+<nav class="sub"><a href="#01-geral-campanha/e1">E1 · 16/11</a><a href="#01-geral-campanha/e2">E2 · 20/11</a><a href="#01-geral-campanha/e3">E3 · 24/11</a><a href="#01-geral-campanha/e4">E4 · 27/11</a><a href="#01-geral-campanha/e5">E5 · 29/11</a><a href="#01-geral-campanha/e6">E6 · 30/11</a></nav>
+<section class="card" id="01-geral-campanha/e1">
+  <aside>
+    <div class="tag">E1 · 16/11 · Lançamento</div>
+    <dl>
+      <dt>Assunto <span class="cnt">50 caracteres</span></dt><dd>Seu cupom está ativo, e o desconto chega a 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>A Black Friday da Vanzolini começou, com desconto em cursos selecionados.</dd>
+      <dt>Chamada</dt><dd>A Black Friday da Vanzolini começou.<br><span class="m">Escolha seu curso e use o cupom, com até 70% OFF.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV 4:5 com a Letícia</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e1-lancamento<br>utm_term=lead-campanha</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="01-geral-campanha/e1-lancamento.html" target="_blank" rel="noopener">emails/01-geral-campanha/e1-lancamento.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="01-geral-campanha/e1-lancamento.html" title="E1" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="01-geral-campanha/e2">
+  <aside>
+    <div class="tag">E2 · 20/11 · Acesso antecipado</div>
+    <dl>
+      <dt>Assunto <span class="cnt">47 caracteres</span></dt><dd>Você está entre os primeiros a usar até 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>Acesso antecipado ao desconto, e alguns cursos têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Você chegou antes, e o desconto já é seu.<br><span class="m">Você tem acesso antecipado a até 70% OFF, e alguns cursos têm vagas limitadas. Qual vai primeiro?</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV gráfico, corte do 70%</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e2-lembrete<br>utm_term=lead-campanha</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="01-geral-campanha/e2-lembrete.html" target="_blank" rel="noopener">emails/01-geral-campanha/e2-lembrete.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="01-geral-campanha/e2-lembrete.html" title="E2" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="01-geral-campanha/e3">
+  <aside>
+    <div class="tag">E3 · 24/11 · Vagas limitadas</div>
+    <dl>
+      <dt>Assunto <span class="cnt">49 caracteres</span></dt><dd>Alguns cursos com até 70% OFF têm vagas limitadas</dd>
+      <dt>Pré-cabeçalho</dt><dd>Quem garante a vaga antes da Black Friday não corre o risco de ficar de fora.</dd>
+      <dt>Chamada</dt><dd>Alguns cursos com até 70% OFF têm vagas limitadas.<br><span class="m">Garanta a sua antes da Black Friday e veja na página quanto você economiza no curso que quer fazer.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Foto da Letícia com o texto</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e3-contagem<br>utm_term=lead-campanha</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="01-geral-campanha/e3-contagem.html" target="_blank" rel="noopener">emails/01-geral-campanha/e3-contagem.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="01-geral-campanha/e3-contagem.html" title="E3" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="01-geral-campanha/e4">
+  <aside>
+    <div class="tag">E4 · 27/11 · Black Friday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">48 caracteres</span></dt><dd>O curso que você adiou está com até 70% OFF hoje</dd>
+      <dt>Pré-cabeçalho</dt><dd>Hoje é o dia de tirar da lista o curso que ficou para depois.</dd>
+      <dt>Chamada</dt><dd>O curso que você adiou está com até 70% OFF hoje.<br><span class="m">Hoje é o dia de tirar da lista o curso que ficou para depois.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Letícia recortada, com o 70% por cima</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e4-black-friday<br>utm_term=lead-campanha</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="01-geral-campanha/e4-black-friday.html" target="_blank" rel="noopener">emails/01-geral-campanha/e4-black-friday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="01-geral-campanha/e4-black-friday.html" title="E4" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="01-geral-campanha/e5">
+  <aside>
+    <div class="tag">E5 · 29/11 · Reta final</div>
+    <dl>
+      <dt>Assunto <span class="cnt">47 caracteres</span></dt><dd>Amanhã o cupom acaba, e o até 70% OFF vai junto</dd>
+      <dt>Pré-cabeçalho</dt><dd>Faltam 24 horas. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Amanhã o cupom acaba, e o até 70% OFF vai junto.<br><span class="m">Faltam 24 horas. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</span></dd>
+      <dt>Faixa do topo</dt><dd>Faltam 24 horas</dd>
+      <dt>Visual</dt><dd>KV horizontal</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e5-reta-final<br>utm_term=lead-campanha</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="01-geral-campanha/e5-reta-final.html" target="_blank" rel="noopener">emails/01-geral-campanha/e5-reta-final.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="01-geral-campanha/e5-reta-final.html" title="E5" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="01-geral-campanha/e6">
+  <aside>
+    <div class="tag">E6 · 30/11 · Cyber Monday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">42 caracteres</span></dt><dd>Cyber Monday: últimas horas de até 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>Até a meia-noite você ainda garante o desconto, enquanto houver vagas. Depois, o preço volta ao normal.</dd>
+      <dt>Chamada</dt><dd>Cyber Monday: últimas horas de até 70% OFF.<br><span class="m">Até a meia-noite você ainda garante o desconto, enquanto houver vagas. Depois, o preço volta ao normal.</span></dd>
+      <dt>Faixa do topo</dt><dd>Último dia: vale até a meia-noite</dd>
+      <dt>Visual</dt><dd>KV Cyber Monday</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e6-cyber-monday<br>utm_term=lead-campanha</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="01-geral-campanha/e6-cyber-monday.html" target="_blank" rel="noopener">emails/01-geral-campanha/e6-cyber-monday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="01-geral-campanha/e6-cyber-monday.html" title="E6" scrolling="no" loading="lazy"></iframe></div>
+</section>
+</div>
+<div class="pub" id="pub-02-geral-base" hidden>
+<p class="intro"><b>Geral · base.</b> Base geral do RD. Todos os links levam para a LP, com <code>utm_term=base-geral</code>.</p>
+<nav class="sub"><a href="#02-geral-base/e1">E1 · 16/11</a><a href="#02-geral-base/e2">E2 · 20/11</a><a href="#02-geral-base/e3">E3 · 24/11</a><a href="#02-geral-base/e4">E4 · 27/11</a><a href="#02-geral-base/e5">E5 · 29/11</a><a href="#02-geral-base/e6">E6 · 30/11</a></nav>
+<section class="card" id="02-geral-base/e1">
+  <aside>
+    <div class="tag">E1 · 16/11 · Lançamento</div>
+    <dl>
+      <dt>Assunto <span class="cnt">50 caracteres</span></dt><dd>Seu cupom está ativo, e o desconto chega a 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>A Black Friday da Vanzolini começou, com desconto em cursos selecionados.</dd>
+      <dt>Chamada</dt><dd>A Black Friday da Vanzolini começou.<br><span class="m">Escolha seu curso e use o cupom, com até 70% OFF.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV 4:5 com a Letícia</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e1-lancamento<br>utm_term=base-geral</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="02-geral-base/e1-lancamento.html" target="_blank" rel="noopener">emails/02-geral-base/e1-lancamento.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="02-geral-base/e1-lancamento.html" title="E1" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="02-geral-base/e2">
+  <aside>
+    <div class="tag">E2 · 20/11 · Acesso antecipado</div>
+    <dl>
+      <dt>Assunto <span class="cnt">47 caracteres</span></dt><dd>Você está entre os primeiros a usar até 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>Acesso antecipado ao desconto, e alguns cursos têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Você chegou antes, e o desconto já é seu.<br><span class="m">Você tem acesso antecipado a até 70% OFF, e alguns cursos têm vagas limitadas. Qual vai primeiro?</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV gráfico, corte do 70%</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e2-lembrete<br>utm_term=base-geral</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="02-geral-base/e2-lembrete.html" target="_blank" rel="noopener">emails/02-geral-base/e2-lembrete.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="02-geral-base/e2-lembrete.html" title="E2" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="02-geral-base/e3">
+  <aside>
+    <div class="tag">E3 · 24/11 · Vagas limitadas</div>
+    <dl>
+      <dt>Assunto <span class="cnt">49 caracteres</span></dt><dd>Alguns cursos com até 70% OFF têm vagas limitadas</dd>
+      <dt>Pré-cabeçalho</dt><dd>Quem garante a vaga antes da Black Friday não corre o risco de ficar de fora.</dd>
+      <dt>Chamada</dt><dd>Alguns cursos com até 70% OFF têm vagas limitadas.<br><span class="m">Garanta a sua antes da Black Friday e veja na página quanto você economiza no curso que quer fazer.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Foto da Letícia com o texto</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e3-contagem<br>utm_term=base-geral</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="02-geral-base/e3-contagem.html" target="_blank" rel="noopener">emails/02-geral-base/e3-contagem.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="02-geral-base/e3-contagem.html" title="E3" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="02-geral-base/e4">
+  <aside>
+    <div class="tag">E4 · 27/11 · Black Friday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">48 caracteres</span></dt><dd>O curso que você adiou está com até 70% OFF hoje</dd>
+      <dt>Pré-cabeçalho</dt><dd>Hoje é o dia de tirar da lista o curso que ficou para depois.</dd>
+      <dt>Chamada</dt><dd>O curso que você adiou está com até 70% OFF hoje.<br><span class="m">Hoje é o dia de tirar da lista o curso que ficou para depois.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Letícia recortada, com o 70% por cima</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e4-black-friday<br>utm_term=base-geral</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="02-geral-base/e4-black-friday.html" target="_blank" rel="noopener">emails/02-geral-base/e4-black-friday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="02-geral-base/e4-black-friday.html" title="E4" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="02-geral-base/e5">
+  <aside>
+    <div class="tag">E5 · 29/11 · Reta final</div>
+    <dl>
+      <dt>Assunto <span class="cnt">47 caracteres</span></dt><dd>Amanhã o cupom acaba, e o até 70% OFF vai junto</dd>
+      <dt>Pré-cabeçalho</dt><dd>Faltam 24 horas. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Amanhã o cupom acaba, e o até 70% OFF vai junto.<br><span class="m">Faltam 24 horas. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</span></dd>
+      <dt>Faixa do topo</dt><dd>Faltam 24 horas</dd>
+      <dt>Visual</dt><dd>KV horizontal</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e5-reta-final<br>utm_term=base-geral</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="02-geral-base/e5-reta-final.html" target="_blank" rel="noopener">emails/02-geral-base/e5-reta-final.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="02-geral-base/e5-reta-final.html" title="E5" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="02-geral-base/e6">
+  <aside>
+    <div class="tag">E6 · 30/11 · Cyber Monday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">42 caracteres</span></dt><dd>Cyber Monday: últimas horas de até 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>Até a meia-noite você ainda garante o desconto, enquanto houver vagas. Depois, o preço volta ao normal.</dd>
+      <dt>Chamada</dt><dd>Cyber Monday: últimas horas de até 70% OFF.<br><span class="m">Até a meia-noite você ainda garante o desconto, enquanto houver vagas. Depois, o preço volta ao normal.</span></dd>
+      <dt>Faixa do topo</dt><dd>Último dia: vale até a meia-noite</dd>
+      <dt>Visual</dt><dd>KV Cyber Monday</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e6-cyber-monday<br>utm_term=base-geral</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="02-geral-base/e6-cyber-monday.html" target="_blank" rel="noopener">emails/02-geral-base/e6-cyber-monday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="02-geral-base/e6-cyber-monday.html" title="E6" scrolling="no" loading="lazy"></iframe></div>
+</section>
+</div>
+<div class="pub" id="pub-03-segmentados" hidden>
+<p class="intro"><b>Segmentados.</b> Base segmentada por área. O texto reforça o curso em que a pessoa demonstrou interesse. Todos os links levam para a LP, com <code>utm_term=base-segmentada</code>.</p>
+<nav class="sub"><a href="#03-segmentados/e1">E1 · 16/11</a><a href="#03-segmentados/e2">E2 · 20/11</a><a href="#03-segmentados/e3">E3 · 24/11</a><a href="#03-segmentados/e4">E4 · 27/11</a><a href="#03-segmentados/e5">E5 · 29/11</a><a href="#03-segmentados/e6">E6 · 30/11</a></nav>
+<section class="card" id="03-segmentados/e1">
+  <aside>
+    <div class="tag">E1 · 16/11 · Lançamento</div>
+    <dl>
+      <dt>Assunto <span class="cnt">60 caracteres</span></dt><dd>Já está sabendo? Aquele curso que você viu está com desconto</dd>
+      <dt>Pré-cabeçalho</dt><dd>O curso da Fundação Vanzolini em que você demonstrou interesse está com desconto na Black Friday.</dd>
+      <dt>Chamada</dt><dd>Já está sabendo da novidade?<br><span class="m">Aquele curso da Fundação Vanzolini em que você demonstrou interesse está com desconto na Black Friday, com até 70% OFF.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV 4:5 com a Letícia</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e1-lancamento<br>utm_term=base-segmentada</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="03-segmentados/e1-lancamento.html" target="_blank" rel="noopener">emails/03-segmentados/e1-lancamento.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="03-segmentados/e1-lancamento.html" title="E1" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="03-segmentados/e2">
+  <aside>
+    <div class="tag">E2 · 20/11 · Acesso antecipado</div>
+    <dl>
+      <dt>Assunto <span class="cnt">56 caracteres</span></dt><dd>Você chegou antes ao desconto do curso que te interessou</dd>
+      <dt>Pré-cabeçalho</dt><dd>Acesso antecipado ao curso em que você demonstrou interesse. Alguns têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Aquele curso que você olhou já tem desconto, e você chegou antes.<br><span class="m">Você demonstrou interesse e tem acesso antecipado a até 70% OFF. Alguns cursos têm vagas limitadas. Qual vai primeiro?</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV gráfico, corte do 70%</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e2-lembrete<br>utm_term=base-segmentada</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="03-segmentados/e2-lembrete.html" target="_blank" rel="noopener">emails/03-segmentados/e2-lembrete.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="03-segmentados/e2-lembrete.html" title="E2" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="03-segmentados/e3">
+  <aside>
+    <div class="tag">E3 · 24/11 · Vagas limitadas</div>
+    <dl>
+      <dt>Assunto <span class="cnt">50 caracteres</span></dt><dd>O curso que te interessou pode ter vagas limitadas</dd>
+      <dt>Pré-cabeçalho</dt><dd>Quem garante a vaga antes da Black Friday não corre o risco de ficar de fora.</dd>
+      <dt>Chamada</dt><dd>O curso que te interessou pode ter vagas limitadas.<br><span class="m">O curso que te interessou pode ter vagas limitadas. Garanta o seu antes da Black Friday e veja na página quanto você economiza.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Foto da Letícia com o texto</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e3-contagem<br>utm_term=base-segmentada</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="03-segmentados/e3-contagem.html" target="_blank" rel="noopener">emails/03-segmentados/e3-contagem.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="03-segmentados/e3-contagem.html" title="E3" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="03-segmentados/e4">
+  <aside>
+    <div class="tag">E4 · 27/11 · Black Friday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">66 caracteres</span></dt><dd>O curso em que você demonstrou interesse está com até 70% OFF hoje</dd>
+      <dt>Pré-cabeçalho</dt><dd>Hoje é o dia de tirar da lista o curso que você já olhou.</dd>
+      <dt>Chamada</dt><dd>O curso em que você demonstrou interesse está com até 70% OFF hoje.<br><span class="m">Hoje é o dia de tirar da lista o curso que você já olhou.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Letícia recortada, com o 70% por cima</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e4-black-friday<br>utm_term=base-segmentada</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="03-segmentados/e4-black-friday.html" target="_blank" rel="noopener">emails/03-segmentados/e4-black-friday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="03-segmentados/e4-black-friday.html" title="E4" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="03-segmentados/e5">
+  <aside>
+    <div class="tag">E5 · 29/11 · Reta final</div>
+    <dl>
+      <dt>Assunto <span class="cnt">50 caracteres</span></dt><dd>Amanhã acaba o desconto do curso que te interessou</dd>
+      <dt>Pré-cabeçalho</dt><dd>Faltam 24 horas. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Amanhã acaba o desconto do curso que te interessou.<br><span class="m">Faltam 24 horas para o curso em que você demonstrou interesse. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</span></dd>
+      <dt>Faixa do topo</dt><dd>Faltam 24 horas</dd>
+      <dt>Visual</dt><dd>KV horizontal</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e5-reta-final<br>utm_term=base-segmentada</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="03-segmentados/e5-reta-final.html" target="_blank" rel="noopener">emails/03-segmentados/e5-reta-final.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="03-segmentados/e5-reta-final.html" title="E5" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="03-segmentados/e6">
+  <aside>
+    <div class="tag">E6 · 30/11 · Cyber Monday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">54 caracteres</span></dt><dd>Cyber Monday: últimas horas do curso que te interessou</dd>
+      <dt>Pré-cabeçalho</dt><dd>Até a meia-noite você ainda garante o desconto, enquanto houver vagas. Depois, o preço volta ao normal.</dd>
+      <dt>Chamada</dt><dd>Cyber Monday: últimas horas do curso que te interessou.<br><span class="m">Até a meia-noite você ainda garante o desconto no curso em que demonstrou interesse, enquanto houver vagas. Depois, o preço volta ao normal.</span></dd>
+      <dt>Faixa do topo</dt><dd>Último dia: vale até a meia-noite</dd>
+      <dt>Visual</dt><dd>KV Cyber Monday</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e6-cyber-monday<br>utm_term=base-segmentada</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="03-segmentados/e6-cyber-monday.html" target="_blank" rel="noopener">emails/03-segmentados/e6-cyber-monday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="03-segmentados/e6-cyber-monday.html" title="E6" scrolling="no" loading="lazy"></iframe></div>
+</section>
+</div>
+<div class="pub" id="pub-04-ex-alunos" hidden>
+<p class="intro"><b>Ex-alunos.</b> Ex-alunos da Fundação, com texto dirigido a quem já estudou. Todos os links levam para a LP, com <code>utm_term=ex-alunos</code>.</p>
+<nav class="sub"><a href="#04-ex-alunos/e1">E1 · 16/11</a><a href="#04-ex-alunos/e2">E2 · 20/11</a><a href="#04-ex-alunos/e3">E3 · 24/11</a><a href="#04-ex-alunos/e4">E4 · 27/11</a><a href="#04-ex-alunos/e5">E5 · 29/11</a><a href="#04-ex-alunos/e6">E6 · 30/11</a></nav>
+<section class="card" id="04-ex-alunos/e1">
+  <aside>
+    <div class="tag">E1 · 16/11 · Lançamento</div>
+    <dl>
+      <dt>Assunto <span class="cnt">57 caracteres</span></dt><dd>Ex-aluno Vanzolini, seu cupom está ativo, com até 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>Quem já estudou com a Fundação Vanzolini sabe o retorno que o conhecimento traz.</dd>
+      <dt>Chamada</dt><dd>Você, ex-aluno, já pode usar o seu cupom.<br><span class="m">Quem já estudou com a Fundação Vanzolini sabe o retorno que o conhecimento traz. Escolha o próximo curso e use o cupom, com até 70% OFF.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV 4:5 com a Letícia</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e1-lancamento<br>utm_term=ex-alunos</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="04-ex-alunos/e1-lancamento.html" target="_blank" rel="noopener">emails/04-ex-alunos/e1-lancamento.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="04-ex-alunos/e1-lancamento.html" title="E1" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="04-ex-alunos/e2">
+  <aside>
+    <div class="tag">E2 · 20/11 · Acesso antecipado</div>
+    <dl>
+      <dt>Assunto <span class="cnt">57 caracteres</span></dt><dd>Ex-aluno, você está entre os primeiros a usar até 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>Acesso antecipado para ex-alunos, e alguns cursos têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Você, ex-aluno, chegou antes, e o desconto já é seu.<br><span class="m">Você tem acesso antecipado a até 70% OFF, e alguns cursos têm vagas limitadas. Qual vai ser o próximo?</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV gráfico, corte do 70%</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e2-lembrete<br>utm_term=ex-alunos</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="04-ex-alunos/e2-lembrete.html" target="_blank" rel="noopener">emails/04-ex-alunos/e2-lembrete.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="04-ex-alunos/e2-lembrete.html" title="E2" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="04-ex-alunos/e3">
+  <aside>
+    <div class="tag">E3 · 24/11 · Vagas limitadas</div>
+    <dl>
+      <dt>Assunto <span class="cnt">59 caracteres</span></dt><dd>Ex-aluno, alguns cursos com até 70% OFF têm vagas limitadas</dd>
+      <dt>Pré-cabeçalho</dt><dd>Quem já estudou com a gente sabe: vale garantir a vaga antes.</dd>
+      <dt>Chamada</dt><dd>Ex-aluno, alguns cursos com até 70% OFF têm vagas limitadas.<br><span class="m">Garanta a sua antes da Black Friday e veja na página quanto você economiza no curso que quer fazer.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Foto da Letícia com o texto</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e3-contagem<br>utm_term=ex-alunos</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="04-ex-alunos/e3-contagem.html" target="_blank" rel="noopener">emails/04-ex-alunos/e3-contagem.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="04-ex-alunos/e3-contagem.html" title="E3" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="04-ex-alunos/e4">
+  <aside>
+    <div class="tag">E4 · 27/11 · Black Friday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">58 caracteres</span></dt><dd>Ex-aluno, o curso que você adiou está com até 70% OFF hoje</dd>
+      <dt>Pré-cabeçalho</dt><dd>Hoje é o dia de voltar a estudar com a Vanzolini e tirar da lista o curso que ficou para depois.</dd>
+      <dt>Chamada</dt><dd>Ex-aluno, o curso que você adiou está com até 70% OFF hoje.<br><span class="m">Hoje é o dia de voltar a estudar com a Vanzolini e tirar da lista o curso que ficou para depois.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>Letícia recortada, com o 70% por cima</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e4-black-friday<br>utm_term=ex-alunos</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="04-ex-alunos/e4-black-friday.html" target="_blank" rel="noopener">emails/04-ex-alunos/e4-black-friday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="04-ex-alunos/e4-black-friday.html" title="E4" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="04-ex-alunos/e5">
+  <aside>
+    <div class="tag">E5 · 29/11 · Reta final</div>
+    <dl>
+      <dt>Assunto <span class="cnt">57 caracteres</span></dt><dd>Ex-aluno, amanhã o cupom acaba, e o até 70% OFF vai junto</dd>
+      <dt>Pré-cabeçalho</dt><dd>Faltam 24 horas. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</dd>
+      <dt>Chamada</dt><dd>Ex-aluno, amanhã o cupom acaba, e o até 70% OFF vai junto.<br><span class="m">Faltam 24 horas. Amanhã o preço volta ao normal, e alguns cursos têm vagas limitadas.</span></dd>
+      <dt>Faixa do topo</dt><dd>Faltam 24 horas</dd>
+      <dt>Visual</dt><dd>KV horizontal</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e5-reta-final<br>utm_term=ex-alunos</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="04-ex-alunos/e5-reta-final.html" target="_blank" rel="noopener">emails/04-ex-alunos/e5-reta-final.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="04-ex-alunos/e5-reta-final.html" title="E5" scrolling="no" loading="lazy"></iframe></div>
+</section>
+<section class="card" id="04-ex-alunos/e6">
+  <aside>
+    <div class="tag">E6 · 30/11 · Cyber Monday</div>
+    <dl>
+      <dt>Assunto <span class="cnt">52 caracteres</span></dt><dd>Ex-aluno, Cyber Monday: últimas horas de até 70% OFF</dd>
+      <dt>Pré-cabeçalho</dt><dd>Até a meia-noite você, ex-aluno, ainda garante o desconto, enquanto houver vagas. Depois, o preço volta ao normal.</dd>
+      <dt>Chamada</dt><dd>Ex-aluno, Ex-aluno, Cyber Monday: últimas horas de até 70% OFF.<br><span class="m">Até a meia-noite você, ex-aluno, ainda garante o desconto, enquanto houver vagas. Depois, o preço volta ao normal.</span></dd>
+      <dt>Faixa do topo</dt><dd>Último dia: vale até a meia-noite</dd>
+      <dt>Visual</dt><dd>KV Cyber Monday</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e6-cyber-monday<br>utm_term=ex-alunos</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="04-ex-alunos/e6-cyber-monday.html" target="_blank" rel="noopener">emails/04-ex-alunos/e6-cyber-monday.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="04-ex-alunos/e6-cyber-monday.html" title="E6" scrolling="no" loading="lazy"></iframe></div>
+</section>
+</div>
+<div class="pub" id="pub-05-lista-vip" hidden>
+<p class="intro"><b>Lista VIP.</b> Alunos e ex-alunos. Convite para se cadastrar na LP e receber o cupom antes. Todos os links levam para a LP, com <code>utm_term=lista-vip</code>.</p>
+<nav class="sub"><a href="#05-lista-vip/e0">E0 · antes de 16/11</a></nav>
+<section class="card" id="05-lista-vip/e0">
+  <aside>
+    <div class="tag">E0 · antes de 16/11 · Lista VIP</div>
+    <dl>
+      <dt>Assunto <span class="cnt">66 caracteres</span></dt><dd>Você está na lista VIP da Black Friday e vai receber o cupom antes</dd>
+      <dt>Pré-cabeçalho</dt><dd>Alunos e ex-alunos merecem tratamento VIP. Cadastre-se e garanta o seu cupom, com até 70% OFF.</dd>
+      <dt>Chamada</dt><dd>Você está na lista VIP da Black Friday e vai receber o cupom antes.<br><span class="m">Para a Fundação Vanzolini, alunos e ex-alunos merecem tratamento VIP. Cadastre-se na página para garantir o seu cupom, com até 70% OFF.</span></dd>
+      <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
+      <dt>Visual</dt><dd>KV 4:5 com a Letícia</dd>
+      <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e0-lista-vip<br>utm_term=lista-vip</dd>
+      <dt>Arquivo</dt><dd class="mono"><a href="05-lista-vip/e0-lista-vip.html" target="_blank" rel="noopener">emails/05-lista-vip/e0-lista-vip.html ↗</a></dd>
+    </dl>
+  </aside>
+  <div class="frame"><iframe class="mail" src="05-lista-vip/e0-lista-vip.html" title="E0" scrolling="no" loading="lazy"></iframe></div>
+</section>
+</div>
+</main>
+<script>
+var pubs=[].slice.call(document.querySelectorAll('.pub'));
+function fit(f){try{var d=f.contentDocument;f.style.height=(d.documentElement.scrollHeight+4)+'px'}catch(e){}}
+document.querySelectorAll('iframe.mail').forEach(function(f){f.addEventListener('load',function(){fit(f)})});
+function show(p,anchor){
+  pubs.forEach(function(x){x.hidden=(x.id!=='pub-'+p)});
+  document.querySelectorAll('.pb').forEach(function(b){b.classList.toggle('on',b.dataset.p===p)});
+  try{history.replaceState(null,'','#'+(anchor||p))}catch(e){}
+  setTimeout(function(){document.querySelectorAll('iframe.mail').forEach(fit);if(anchor){var el=document.getElementById(anchor);if(el)el.scrollIntoView()}else window.scrollTo(0,0)},120);
+}
+document.querySelectorAll('.pb').forEach(function(b){b.onclick=function(){show(b.dataset.p)}});
+document.querySelectorAll('.sub a').forEach(function(a){a.onclick=function(e){e.preventDefault();var id=a.getAttribute('href').slice(1);show(id.split('/')[0],id)}});
+document.querySelectorAll('.tg button').forEach(function(b){b.onclick=function(){
+ document.body.classList.toggle('mob',b.dataset.w==='m');
+ document.querySelectorAll('.tg button').forEach(function(x){x.classList.toggle('on',x===b)});
+ setTimeout(function(){document.querySelectorAll('iframe.mail').forEach(fit)},150)}});
+var h=location.hash.slice(1),p0=h?h.split('/')[0]:'01-geral-campanha';
+if(!document.getElementById('pub-'+p0))p0='01-geral-campanha';
+show(p0,h.indexOf('/')>0?h:null);
+</script></body></html>
