@@ -44,10 +44,10 @@ body.mob iframe.mail{width:375px}
     <div class="tag">E1 · 16/11 · Chegou o cupom</div>
     <dl>
       <dt>Assunto <span class="cnt">44 caracteres</span></dt><dd>Chegou o seu cupom da Black Friday Vanzolini</dd>
-      <dt>Pré-cabeçalho</dt><dd>Use no curso que você escolher, com até 70% OFF.</dd>
-      <dt>Chamada</dt><dd>Chegou o seu cupom da Black Friday.<br><span class="m">Use no curso que você escolher, com até 70% OFF.</span></dd>
+      <dt>Pré-cabeçalho</dt><dd>Use no curso que você escolheu, com até 70% OFF.</dd>
+      <dt>Chamada</dt><dd>Chegou o seu cupom da Black Friday.<br><span class="m">Use no curso que você escolheu, com até 70% OFF.</span></dd>
       <dt>Faixa do topo</dt><dd class="m">Sem faixa de data</dd>
-      <dt>Variáveis do RD</dt><dd class="mono">{{ lead.cf_bf26_cupom }}<br>{{ lead.cf_bf26_curso }}<br><span class="m">A prévia ao lado usa BF50 e um curso de exemplo.</span></dd>
+      <dt>Variáveis do RD</dt><dd class="mono">{{ lead.cf_bf26_cupom }}<br>{{ lead.cf_bf26_curso }}<br>{{ lead.cf_bf26_curso_url }}<br><span class="m">A prévia ao lado usa BF50 e um curso de exemplo.</span></dd>
       <dt>Visual</dt><dd>KV 4:5 com a Letícia</dd>
       <dt>UTM</dt><dd class="mono">utm_source=rd-station<br>utm_medium=email<br>utm_campaign=black-friday-2026<br>utm_content=e1-lancamento<br>utm_term=lead-campanha-curso</dd>
       <dt>Arquivo</dt><dd class="mono"><a href="01a-campanha-com-curso/e1-lancamento.html" target="_blank" rel="noopener">emails/01a-campanha-com-curso/e1-lancamento.html ↗</a></dd>
@@ -575,7 +575,7 @@ body.mob iframe.mail{width:375px}
 var pubs=[].slice.call(document.querySelectorAll('.pub'));
 function fit(f){try{var d=f.contentDocument;f.style.height=(d.documentElement.scrollHeight+4)+'px'}catch(e){}}
 document.querySelectorAll('iframe.mail').forEach(function(f){f.addEventListener('load',function(){fit(f)});
-  try{fetch(f.getAttribute('src')).then(function(r){return r.text()}).then(function(h){if(h.indexOf('{{')<0)return;
+  try{fetch(f.getAttribute('src')+'?c='+Date.now(),{cache:'no-store'}).then(function(r){return r.text()}).then(function(h){if(h.indexOf('{{')<0)return;
     f.srcdoc=h.replace(/\{\{ lead\.cf_bf26_cupom \}\}/g,'BF50').replace(/\{\{ lead\.cf_bf26_curso_url \}\}/g,'#').replace(/\{\{ lead\.cf_bf26_curso \}\}/g,'MBA em Liderança, IA e Execução Estratégica')}).catch(function(){})}catch(e){}});
 function show(p,anchor){
   pubs.forEach(function(x){x.hidden=(x.id!=='pub-'+p)});
