@@ -117,6 +117,7 @@ html[data-state="cyber"] .off,html[data-state="cyber"] .vsec .off{background:#2D
 .rs{font-size:.58em;font-weight:500;letter-spacing:0;margin-right:.18em}
 .price s{font:400 14.5px/1 var(--data);color:var(--muted)}
 .price b{font:600 23.5px/1 var(--data);color:var(--teal)}
+.price .parc{flex-basis:100%;font:500 13px/1.3 var(--data);color:var(--muted);margin-top:2px}.price .parc b{font:600 13px/1.3 var(--data);color:inherit}
 .price.locked b{color:var(--muted);font:500 14.5px/1.3 var(--data)}
 .go{align-self:flex-start;background:var(--blue);color:var(--on-teal);font-weight:700;font-size:13.5px;line-height:1;border-radius:999px;padding:8px 14px;transition:background-color .15s ease}
 .card:hover .go{background:#5A82FF}
@@ -489,9 +490,9 @@ footer{padding-bottom:32px}
 @media (max-width:860px){.inst .photo.box{width:min(340px,86%);order:-1}}
 </style>
 
+
+
 <div class="mock" role="note">Protótipo v3 para aprovação. O formulário não envia ao RD.</div>
-
-
 <section class="hero">
   <div class="wrap">
     <div class="hlock">
@@ -553,27 +554,27 @@ footer{padding-bottom:32px}
       <article class="plan">
         <h3>SoloPlay</h3>
         <p class="who">Para você aprender sozinho.</p>
-        <div class="pr"><small>12x</small><span class="rs">R$</span>95,84</div>
-        <span class="tot">Total R$ 1.150 no plano anual. À vista, 5% de desconto.</span>
-        <a class="btn" data-plan="SoloPlay" data-total="1150" href="https://www.vanzoliniplay.org.br/?utm_source=lp-black-friday&utm_medium=play&utm_campaign=black-friday-2026&utm_content=soloplay#planos" target="_blank" rel="noopener">Assinar SoloPlay</a>
+        <div class="pr"><small>12x</small><span class="rs">R$</span>28,75</div>
+        <span class="tot"><s>R$ 1.150</s> por R$ 345 no plano anual (70% OFF, cupom BF70).</span>
+        <a class="btn" data-plan="SoloPlay" data-total="345" href="https://www.vanzoliniplay.org.br/?utm_source=lp-black-friday&utm_medium=play&utm_campaign=black-friday-2026&utm_content=soloplay#planos" target="_blank" rel="noopener">Assinar SoloPlay</a>
       </article>
       <article class="plan rec">
         <span class="rc">RECOMENDADO</span>
         <h3>DuoPlay</h3>
         <p class="who">2 licenças: divida com alguém.</p>
-        <div class="pr"><small>12x</small><span class="rs">R$</span>165</div>
-        <span class="tot">R$ 990 por pessoa. Total R$ 1.980. À vista, 5% de desconto.</span>
-        <a class="btn" data-plan="DuoPlay" data-total="1980" href="https://www.vanzoliniplay.org.br/?utm_source=lp-black-friday&utm_medium=play&utm_campaign=black-friday-2026&utm_content=duoplay#planos" target="_blank" rel="noopener">Assinar DuoPlay</a>
+        <div class="pr"><small>12x</small><span class="rs">R$</span>49,50</div>
+        <span class="tot">R$ 297 por pessoa. <s>R$ 1.980</s> por R$ 594 (70% OFF, cupom BF70).</span>
+        <a class="btn" data-plan="DuoPlay" data-total="594" href="https://www.vanzoliniplay.org.br/?utm_source=lp-black-friday&utm_medium=play&utm_campaign=black-friday-2026&utm_content=duoplay#planos" target="_blank" rel="noopener">Assinar DuoPlay</a>
       </article>
       <article class="plan">
         <h3>TriPlay</h3>
         <p class="who">3 licenças: você e mais duas pessoas.</p>
-        <div class="pr"><small>12x</small><span class="rs">R$</span>208,33</div>
-        <span class="tot">R$ 833,34 por pessoa. Total R$ 2.500. À vista, 5% de desconto.</span>
-        <a class="btn" data-plan="TriPlay" data-total="2500" href="https://www.vanzoliniplay.org.br/?utm_source=lp-black-friday&utm_medium=play&utm_campaign=black-friday-2026&utm_content=triplay#planos" target="_blank" rel="noopener">Assinar TriPlay</a>
+        <div class="pr"><small>12x</small><span class="rs">R$</span>62,50</div>
+        <span class="tot">R$ 250 por pessoa. <s>R$ 2.500</s> por R$ 750 (70% OFF, cupom BF70).</span>
+        <a class="btn" data-plan="TriPlay" data-total="750" href="https://www.vanzoliniplay.org.br/?utm_source=lp-black-friday&utm_medium=play&utm_campaign=black-friday-2026&utm_content=triplay#planos" target="_blank" rel="noopener">Assinar TriPlay</a>
       </article>
     </div>
-    <p class="fine">Valores do site atual do Vanzolini Play. Condição de Black Friday para os planos: <span class="tbc">a definir</span></p>
+    <p class="fine">Planos anuais com 70% de desconto na Black Friday. Use o cupom BF70.</p>
   </div>
 </section>
 
@@ -608,12 +609,11 @@ footer{padding-bottom:32px}
   <div class="fl" id="faqList">
     <details open><summary><span class="fn">01.</span>Como sei qual cupom usar?</summary><p>Cada curso da lista mostra o desconto dele no selo do canto: <b>40%</b>, <b>50%</b> ou <b>70%</b>, na cor do cupom. Pegue o cupom com o mesmo valor. Ele vale para todos os cursos marcados com aquele desconto.</p></details>
     <details><summary><span class="fn">02.</span>Como recebo o cupom?</summary><p>Clique no desconto que aparece no seu curso (40%, 50% ou 70%) e informe nome, e-mail e telefone. O cupom aparece na tela e chega no seu e-mail. Na inscrição, informe o cupom no campo de desconto.</p></details>
-    <details><summary><span class="fn">03.</span>Posso usar mais de um cupom?</summary><p>Um cupom por inscrição. Se você quer fazer cursos de grupos diferentes, pegue o cupom de cada um.</p></details>
-    <details><summary><span class="fn">04.</span>O desconto vale para qualquer turma?</summary><p>Vale para as turmas dos cursos desta página com início até [data] <span class="tbc">a confirmar</span>.</p></details>
-    <details><summary><span class="fn">05.</span>Posso parcelar?</summary><p>Sim, em até 10x no cartão <span class="tbc">a confirmar</span>.</p></details>
-    <details><summary><span class="fn">06.</span>Os cursos têm certificado?</summary><p>Todos têm certificado da Fundação Vanzolini. Os cursos de auditor IQNet emitem também o certificado internacional IQNet.</p></details>
-    <details><summary><span class="fn">07.</span>O que é o Vanzolini Play?</summary><p>É a assinatura anual de conteúdo gravado da Vanzolini, com +200 horas e certificado. Tem planos individual, para 2 e para 3 pessoas.</p></details>
-    <details><summary><span class="fn">08.</span>Quero levar a Vanzolini para minha equipe. Como faço?</summary><p>Fale com o time In Company pelo WhatsApp. Há condição especial para empresas durante a Black Friday.</p></details>
+    <details><summary><span class="fn">03.</span>Posso usar mais de um cupom?</summary><p>Você pode utilizar o mesmo cupom quantas vezes quiser. Não é possível aplicar mais de um cupom no mesmo curso.</p></details>
+    <details><summary><span class="fn">04.</span>Posso parcelar?</summary><p>Verifique na página do curso selecionado as condições de pagamento.</p></details>
+    <details><summary><span class="fn">05.</span>Os cursos têm certificado?</summary><p>Sim, todos os cursos têm certificado.</p></details>
+    <details><summary><span class="fn">06.</span>O que é o Vanzolini Play?</summary><p>É a assinatura anual de conteúdo online da Vanzolini, com +200 horas e certificado. Tem planos individual, para 2 e para 3 pessoas.</p></details>
+    <details><summary><span class="fn">07.</span>Quero levar a Vanzolini para minha equipe. Como faço?</summary><p>Fale com o time In Company pelo WhatsApp ou pelo e-mail <a href="mailto:cursosincompany@vanzolini.org.br">cursosincompany@vanzolini.org.br</a>. Há condição especial para empresas durante a Black Friday.</p></details>
   </div>
 </section>
 <footer><div class="wrap"><div>Fundação Vanzolini · Oferta válida de 16 a 30/11/2026 para os cursos desta página.<br>WhatsApp <a class="ftel" href="https://wa.me/551131453717" target="_blank" rel="noopener">(11) 3145-3717</a></div><ul class="soc" aria-label="Redes sociais"><li><a href="https://wa.me/551131453717?text=Ol%C3%A1!%20Vim%20pela%20Black%20Friday%20Vanzolini" target="_blank" rel="noopener" aria-label="WhatsApp" data-rede="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a></li><li><a href="https://www.instagram.com/fundacaovanzolini/" target="_blank" rel="noopener" aria-label="Instagram" data-rede="instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3.1 0-4.1.1-4.4.2-5.7 2.5-5.8 5.8C2 8.9 2 9.3 2 12s0 3.1.1 4.1c.2 4.3 2.4 5.6 5.8 5.8 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c4.3-.2 5.6-2.5 5.8-5.8.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.2-4.3-2.4-5.6-5.8-5.8C15.1 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.7.1 3.9 1.4 4 4 .1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.6-1.3 3.9-4 4-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.7-.1-3.9-1.4-4-4-.1-1-.1-1.3-.1-4s0-3 .1-4c.1-2.6 1.3-3.9 4-4 1-.1 1.3-.1 4-.1z"/></svg></a></li><li><a href="https://www.linkedin.com/company/40540/" target="_blank" rel="noopener" aria-label="LinkedIn" data-rede="linkedin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.7 13 12.7 14.3V19h-3V9.5h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.6 2 3.6 4.6V19z"/></svg></a></li><li><a href="https://www.facebook.com/FVanzolini" target="_blank" rel="noopener" aria-label="Facebook" data-rede="facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a></li><li><a href="https://www.youtube.com/channel/UCt-1eEP299j6-x-v7Mi8Bhw" target="_blank" rel="noopener" aria-label="YouTube" data-rede="youtube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a></li><li><a href="https://x.com/vanzolini/" target="_blank" rel="noopener" aria-label="X" data-rede="x"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a></li></ul></div></footer>
@@ -654,84 +654,102 @@ footer{padding-bottom:32px}
 <script>
 (function(){
 "use strict";
-var AREAS={MBA:"MBAs",PES:"Pessoas e Soft Skills",PRJ:"Projetos e Agile",TEC:"IA e Tecnologia",OPE:"Operações e Processos",INO:"Inovação",NOR:"Normas ISO"};
+var AREAS={MBA:"MBAs",PES:"Pessoas e Soft Skills",PRJ:"Projetos e Agile",TEC:"IA+ e Tecnologia",OPE:"Operações e Processos",INO:"Inovação",NOR:"Normas ISO"};
 var U="https://vanzolini.org.br/";
-/* cupons por tipo de curso (proposta: MBA 40, certificação internacional 50, demais 70; todos dão certificado) */
+/* cupons por tipo de curso (planilha da Bruna, 20/10/2026: MBA 40, intermediários 50, formações curtas 70) */
 var TIER={
   70:{code:"BF70"},
   50:{code:"BF50"},
   40:{code:"BF40"}
 };
-var DISC={"Introdutório":70,"Formação":70,"Certificação":50,"MBA":40};
+var DISC={"T70":70,"T50":50,"MBA":40};
 /* [área, título, caminho, tipo, formato, carga h, preço cheio] (preço, carga e formato ilustrativos) */
 var RAW=[
-["MBA","MBA em Liderança, IA e Execução Estratégica","https://mba.vanzolini.org.br/mba-em-lideranca-ia-e-execucao-estrategica/","MBA","EaD híbrido",360,24900],
-["MBA","MBA em IA Aplicada à Gestão Estratégica de Projetos","https://mba.vanzolini.org.br/mba-em-ia-aplicada-gestao-projetos-vanzolini/","MBA","EaD híbrido",360,24900],
-["MBA","MBA em Engenharia da Qualidade","https://mba.vanzolini.org.br/mba-em-engenharia-da-qualidade-vanzolini/","MBA","EaD híbrido",360,24900],
-["MBA","MBA em Gestão Ágil, Inovação e Liderança","cursos/mba-em-gestao-agil-inovacao-e-lideranca/","MBA","EaD híbrido",360,24900],
-["PES","Autoconhecimento, Liderança e Gestão de Pessoas","educacao/gestao-de-pessoas/autoconhecimento-lideranca-e-gestao-de-pessoas-2/","Formação","EaD ao vivo",24,1890],
-["PES","Gestão de Equipes em Home Office","educacao/gestao-de-pessoas/introducao-a-gestao-de-equipes-em-home-office/","Formação","EaD ao vivo",16,1290],
-["PES","Grupos Semi-Autônomos","educacao/gestao-de-pessoas/grupos-semi-autonomos-alinhando-autonomia-agilidade-e-produtividade-nas-organizacoes/","Formação","EaD ao vivo",16,1290],
-["PES","Inteligência Emocional","educacao/soft-skills/inteligencia-emocional-como-usar-a-razao-para-equilibrar-a-emocao/","Formação","EaD ao vivo",16,1290],
-["PES","Liderança Assertiva","educacao/gestao-de-pessoas/lideranca-assertiva-um-estilo-que-constroi-relacoes-maduras-com-foco-em-resultados/","Formação","EaD ao vivo",24,1890],
-["PES","Liderança Feminina","educacao/gestao-de-pessoas/lideranca-feminina-em-gestao-de-operacoes/","Formação","EaD ao vivo",24,1890],
-["PES","Negociação e Gestão de Conflitos","educacao/gestao-de-pessoas/formacao-em-negociacao-e-gestao-de-conflitos/","Formação","EaD ao vivo",24,1890],
-["PES","Storytelling e Técnicas de Oratória","educacao/gestao-de-pessoas/storytelling-e-tecnicas-de-oratoria/","Formação","Presencial",16,1490],
-["PRJ","Agile Scrum Foundation | Preparatório EXIN","educacao/agile/agile-scrum-foundation-preparatorio-para-a-certificacao-exin/","Certificação","EaD ao vivo",24,2190],
-["PRJ","Agile Scrum Master","educacao/agile/agile-scrum-master-formacao-para-um-verdadeiro-scrum-master/","Certificação","EaD ao vivo",32,2690],
-["PRJ","Agile Scrum | Product Owner","educacao/agile/agile-scrum-product-owner-2/","Certificação","EaD ao vivo",32,2690],
-["PRJ","Avaliação de Projetos e Valuation","cursos/avaliacao-de-projetos-e-valuation/","Formação","EaD ao vivo",32,2490],
-["PRJ","Básico em Gestão de Projetos","cursos/basico-em-gestao-de-projetos-24-horas/","Introdutório","EaD ao vivo",24,1490],
-["PRJ","Agilidade Organizacional com OKRs","educacao/agile/como-potencializar-a-agilidade-organizacional-com-okrs/","Formação","EaD ao vivo",16,1290],
-["PRJ","Easy PMP® | Preparatório PMI® (com ChatGPT)","educacao/projetos/easy-pmp-preparatorio-para-a-certificacao-do-pmi/","Certificação","EaD ao vivo",40,3490],
-["PRJ","Introdução ao Agile Scrum | Product Owner","educacao/agile/introducao-em-agile-scrum-product-owner/","Introdutório","EaD ao vivo",8,690],
-["PRJ","Introdução ao Agile Scrum Master","educacao/agile/introducao-agile-scrum-master/","Introdutório","EaD ao vivo",8,690],
-["PRJ","Métricas Ágeis","cursos/metricas-ageis-da-produtividade-ao-impacto-no-negocio/","Formação","EaD ao vivo",16,1290],
-["TEC","Aplicações de IA em Finanças","cursos/aplicacoes-de-ia-em-financas/","Formação","EaD ao vivo",24,1990],
-["TEC","Business Intelligence","cursos/business-intelligence/","Formação","EaD ao vivo",32,2490],
-["TEC","Cibersegurança","cursos/ciberseguranca/","Formação","EaD ao vivo",24,1990],
-["TEC","Data Driven na Gestão de Empresas","cursos/data-driven-na-gestao-de-empresas/","Formação","EaD ao vivo",24,1990],
-["TEC","Dominando a IA para Negócios","cursos/ferramentas-e-aplicacoes-para-negocios/","Formação","EaD ao vivo",16,1490],
-["TEC","IA para Operações Industriais","cursos/ia-para-operacoes-industriais/","Formação","EaD ao vivo",24,1990],
-["TEC","IA na Gestão de Relacionamento com o Cliente","cursos/inteligencia-artificial-aplicada-a-gestao-de-relacionamento-com-o-cliente/","Formação","EaD ao vivo",16,1490],
-["TEC","IA na Gestão de Projetos","cursos/inteligencia-artificial-na-gestao-de-projetos/","Formação","EaD ao vivo",16,1490],
-["TEC","Lógica de Programação para Análise de Dados","cursos/logica-de-programacao-para-analise-de-dados/","Introdutório","EaD ao vivo",24,1490],
-["OPE","Economia Circular e Sustentabilidade","educacao/economia-circular-e-sustentabilidade-na-cadeia-produtiva/","Formação","EaD ao vivo",24,1890],
-["OPE","Excelência em Gestão de Operações","cursos/gestao-de-operacoes/","Formação","EaD ao vivo",40,3290],
-["OPE","Estratégias de Operação e Competitividade","educacao/negocios/estrategias-de-operacao-e-competitividade/","Formação","EaD ao vivo",24,1890],
-["OPE","Ferramentas da Qualidade","cursos/ferramentas-da-qualidade/","Formação","EaD ao vivo",16,1290],
-["OPE","Ergonomia no Trabalho","cursos/fundamentos-e-aplicacoes-da-ergonomia-no-trabalho/","Formação","EaD ao vivo",24,1890],
-["OPE","Gerenciamento da Rotina","cursos/gerenciamento-da-rotina-e-ferramentas-da-qualidade/","Formação","EaD ao vivo",24,1890],
-["OPE","Gestão da Manutenção e Confiabilidade","cursos/gestao-da-manutencao-e-confiabilidade/","Formação","EaD ao vivo",24,1890],
-["OPE","Gestão por Processos","educacao/processos/gestao-por-processos-melhoria-dos-processos/","Formação","EaD ao vivo",24,1890],
-["OPE","Gestão por Resultados e Indicadores","cursos/gestao-por-resultados-e-indicadores-de-desempenho/","Formação","EaD ao vivo",16,1290],
-["OPE","Just In Time: Kanban, Células e Setup Rápido","educacao/sistemas-de-gestao/introducao-ao-just-in-time/","Introdutório","EaD ao vivo",16,1290],
-["OPE","Lean: Excelência Operacional","cursos/lean-ferramentas-para-excelencia-operacional/","Formação","EaD ao vivo",24,1890],
-["OPE","Logística e Supply Chain","cursos/logistica-e-supply-chain-com-enfase-em-ferramentas-analiticas-e-novas-tecnologias/","Formação","EaD ao vivo",40,3290],
-["OPE","Planejamento Estratégico","cursos/planejamento-estrategico/","Formação","EaD ao vivo",24,1890],
-["OPE","Pesquisa Operacional","educacao/producao/introducao-a-pesquisa-operacional/","Introdutório","EaD ao vivo",24,1690],
-["OPE","PPP e Concessões","educacao/custos/ppp-e-concessoes-conceitos-e-praticas/","Formação","EaD ao vivo",24,2190],
-["OPE","PPPs: Aspectos Jurídicos","educacao/custos/introducao-as-ppps/","Formação","EaD ao vivo",16,1490],
-["OPE","Produtividade para Micro e Pequenas Empresas","educacao/administracao/formacao-em-produtividade-para-micro-e-pequenas-empresas/","Introdutório","EaD ao vivo",16,990],
-["OPE","Sustentabilidade em Gestão de Operações","cursos/sustentabilidade-em-gestao-de-operacoes/","Formação","EaD ao vivo",24,1890],
-["INO","Desenvolvimento de Produtos e Serviços","cursos/desenvolvimento-estrategico-de-produtos-e-servicos/","Formação","EaD ao vivo",24,1890],
-["INO","Gestão de Customer Success","educacao/inovacao/gestao-de-customer-success/","Formação","EaD ao vivo",16,1290],
-["INO","Transformação Digital","cursos/gestao-e-estrategia-para-transformacao-digital/","Formação","EaD ao vivo",24,1990],
-["INO","Gestão para Impacto Social (ESG)","cursos/formacao-em-gestao-para-impacto-social/","Formação","EaD ao vivo",16,1290],
-["NOR","Riscos Psicossociais | ISO 45003","cursos/diretrizes-para-gestao-de-riscos-psicossociais-iso-450032021/","Formação","EaD ao vivo",16,1490],
-["NOR","Interpretação da ISO 45001","cursos/interpretacao-dos-requisitos-iso-45001-2018/","Formação","EaD ao vivo",16,1290],
-["NOR","Interpretação da ISO 9001:2015","cursos/interpretacao-dos-requisitos-iso-9001-2015-4/","Formação","EaD ao vivo",16,1290],
-["NOR","IQNet ISO 45001 | Auditor Interno","cursos/iqnet-iso-45001-auditor-interno/","Certificação","EaD ao vivo",24,2290],
-["NOR","IQNet ISO 45001 | Auditor Líder","cursos/iqnet-iso-45001-auditor-lider/","Certificação","Presencial",40,4490],
-["NOR","IQNet ISO 9001 | Auditor Interno","cursos/iqnet-iso-9001-auditor-interno-2/","Certificação","EaD ao vivo",24,2290],
-["NOR","IQNet ISO 9001 | Auditor Líder","cursos/iqnet-iso-9001-auditor-lider/","Certificação","Presencial",40,4490]
+["MBA","MBA em Liderança, IA e Execução Estratégica","https://mba.vanzolini.org.br/mba-em-lideranca-ia-e-execucao-estrategica/","MBA","Online + gravado",360,16905],
+["MBA","MBA em IA Aplicada à Gestão Estratégica de Projetos","https://mba.vanzolini.org.br/mba-em-ia-aplicada-gestao-projetos-vanzolini/","MBA","Online + gravado",360,17750.25],
+["MBA","MBA em Engenharia da Qualidade","https://mba.vanzolini.org.br/mba-em-engenharia-da-qualidade-vanzolini/","MBA","Online + gravado",360,17750.25],
+["PES","Da Execução à Liderança: Programa de Aceleração para Novos Líderes","cursos/da-execucao-a-lideranca-programa-de-aceleracao-para-novos-lideres/","T50","Ao vivo",18,1450],
+["PES","Formação em Liderança Feminina","cursos/lideranca-feminina/","T70","Online",20,500],
+["PES","Formação em Negociação e Gestão de Conflitos","cursos/negociacao-e-gestao-de-conflitos/","T70","Online",12,320],
+["PES","IA e Liderança na Prática: Crie seu Plano de Alta Performance","cursos/ia-e-lideranca-na-pratica-crie-seu-plano-de-alta-performance-para-os-proximos-90-dias/","T50","Ao vivo",4,19.9],
+["PES","Inteligência Emocional","cursos/inteligencia-emocional-como-usar-a-razao-para-equilibrar-a-emocao/","T50","Ao vivo",16,1200],
+["PES","Introdução a Gestão de Equipes em Home Office","cursos/gestao-de-equipes-em-home-office/","T70","Online",4,198],
+["PES","Introdução aos Grupos Semi-Autônomos","cursos/grupos-semi-autonomos/","T70","Online",4,198],
+["PES","Liderança: Autoconhecimento e Comunicação na Prática","cursos/lideranca-autoconhecimento-e-comunicacao-na-pratica/","T50","Ao vivo",18,1450],
+["PES","Storytelling com Dados e Comunicação Eficaz","cursos/storytelling-e-tecnicas-de-oratoria/","T50","Ao vivo",18,1650],
+["PRJ","Agile Scrum Foundation | Preparatório EXIN","cursos/agile-scrum-foundation-para-certificacao-exin/","T50","Ao vivo",16,1260],
+["PRJ","Agile Scrum Master","cursos/agile-scrum-master-formacao-para-um-verdadeiro-scrum-master/","T50","Ao vivo",16,1260],
+["PRJ","Agile Scrum Product Owner","cursos/agile-scrum-product-owner/","T50","Ao vivo",12,1260],
+["PRJ","Aspectos Legais da Gestão dos Resíduos Sólidos","cursos/aspectos-legais-da-gestao-dos-residuos-solidos/","T70","Online",16,440],
+["PRJ","Formação em Avaliação de Projetos e Valuation","cursos/avaliacao-de-projetos-e-valuation/","T70","Online",12,320],
+["PRJ","Formação em Métricas Ágeis: Da Produtividade ao Impacto no Negócio","cursos/metricas-ageis-da-produtividade-ao-impacto-no-negocio/","T70","Online",20,500],
+["PRJ","Introdução ao Agile Scrum Master","cursos/introducao-ao-agile-scrum-master/","T70","Online",4,198],
+["PRJ","Introdução ao Agile Scrum Product Owner","cursos/introducao-ao-agile-scrum-product-owner/","T70","Online",4,198],
+["PRJ","OKR na Prática: Resultados Potencializados com IA","cursos/como-potencializar-a-agilidade-organizacional-com-okrs/","T50","Ao vivo",9,900],
+["TEC","Formação em Business Intelligence","cursos/business-intelligence/","T70","Online",20,500],
+["TEC","Formação em Cibersegurança","cursos/ciberseguranca/","T70","Online",12,320],
+["TEC","Formação em Data Driven na Gestão de Empresas","cursos/data-driven-na-gestao-de-empresas/","T70","Online",12,320],
+["TEC","Formação em IA Aplicada à Gestão de Relacionamento com o Cliente","cursos/inteligencia-artificial-aplicada-a-gestao-de-relacionamento-com-o-cliente/","T70","Online",12,320],
+["TEC","Formação em Lógica de Programação para Análise de Dados","cursos/logica-de-programacao-para-analise-de-dados/","T70","Online",12,320],
+["TEC","IA+ | Farmacêutica: Primeiros Passos para Aplicação","cursos/ia-nas-operacoes-farmaceuticas/","T50","Ao vivo",18,1950],
+["TEC","IA+ | Farmacêutica: Qualidade em Todo o Ciclo de Vida","cursos/ia-farmaceutica-qualidade-em-todo-o-ciclo-de-vida/","T50","Ao vivo",18,2500],
+["TEC","IA+ | Muito Além do Prompt","cursos/vanzolini-ia-muito-alem-do-prompt/","T50","Ao vivo",12,1650],
+["TEC","IA+ | Operações Industriais","cursos/ia-operacoes-industriais/","T50","Híbrido",20,3650],
+["TEC","IA+ | Projetos","cursos/ia-projetos/","T50","Ao vivo",21,1740],
+["TEC","IA+ | Projetos de Melhoria e Gestão de Portfólio","cursos/ia-para-projetos-de-melhoria-e-gestao-de-portfolio/","T50","Ao vivo",15,1300],
+["TEC","IA+ | RH","cursos/ia-rh/","T50","Ao vivo",15,1300],
+["TEC","IA+ | Vendas","cursos/ia-vendas/","T50","Ao vivo",15,1300],
+["OPE","Excelência em Gestão de Operações","cursos/gestao-de-operacoes/","T50","Ao vivo",36,1900],
+["OPE","Formação em Estratégias de Operação e Competitividade","cursos/estrategias-de-operacao-e-competitividade/","T70","Online",12,320],
+["OPE","Formação em Gestão da Manutenção e Confiabilidade","cursos/gestao-da-manutencao-e-confiabilidade/","T70","Online",12,320],
+["OPE","Formação em Produtividade para Micro e Pequenas Empresas","cursos/produtividade-para-micro-e-pequenas-empresas/","T70","Online",12,320],
+["OPE","Gestão por Processos, Melhoria dos Processos","cursos/gestao-por-processos-melhoria-dos-processos/","T50","Ao vivo",18,1630],
+["OPE","Gestão por Resultados e Indicadores de Desempenho","cursos/gestao-por-resultados-e-indicadores-de-desempenho/","T50","Ao vivo",18,1320],
+["OPE","Introdução a Ferramentas da Qualidade","cursos/ferramentas-da-qualidade/","T70","Online",4,198],
+["OPE","Introdução a PPP e Concessões: Conceitos e Práticas","cursos/ppp-e-concessoes/","T70","Online",4,198],
+["OPE","Introdução a Sustentabilidade em Gestão de Operações","cursos/sustentabilidade-em-gestao-de-operacoes/","T70","Online",4,198],
+["OPE","Introdução ao Just In Time: Kanban, Células e Setup Rápido","cursos/just-in-time-kanban-celulas-e-setup-rapido/","T70","Online",4,198],
+["OPE","Introdução ao Planejamento Estratégico","cursos/planejamento-estrategico/","T70","Online",4,198],
+["OPE","Introdução aos Fundamentos e Aplicações da Ergonomia no Trabalho","cursos/fundamentos-e-aplicacoes-da-ergonomia-no-trabalho/","T70","Online",4,198],
+["OPE","Introdução à Economia Circular e Sustentabilidade na Cadeia Produtiva","cursos/economia-circular-e-sustentabilidade-na-cadeia-produtiva/","T70","Online",4,198],
+["OPE","Introdução à Pesquisa Operacional","cursos/pesquisa-operacional/","T70","Online",4,198],
+["OPE","Introdução às PPPs: Aspectos Jurídicos","cursos/ppps-aspectos-juridicos/","T70","Online",4,198],
+["OPE","Logística e Supply Chain com IA e Analytics","cursos/logistica-supply-chain-inteligencia-artificial-analytics/","T50","Ao vivo",60,2200],
+["INO","Formação em Desenvolvimento Estratégico de Produtos e Serviços","cursos/desenvolvimento-estrategico-de-produtos-e-servicos/","T70","Online",12,320],
+["INO","Formação em Gestão de Customer Success","cursos/gestao-de-customer-success/","T70","Online",12,320],
+["INO","Formação em Gestão para Impacto Social: Entendendo o \"S\" do ESG","cursos/formacao-em-gestao-para-impacto-social/","T70","Online",12,320],
+["INO","Introdução à Gestão e Estratégia para Transformação Digital","cursos/gestao-e-estrategia-para-transformacao-digital/","T70","Online",4,198],
+["NOR","Atualização Novo Manual OPSS ONA","cursos/atualizacao-novo-manual-opss-ona/","T50","Ao vivo",12,740],
+["NOR","IQNet ISO 14001 | Auditor Interno","cursos/iqnet-iso-14001-auditor-interno/","T50","Ao vivo",16,1600],
+["NOR","IQNet ISO 14001 | Auditor Líder","cursos/iqnet-iso-14001-auditor-lider/","T50","Ao vivo",40,3500],
+["NOR","IQNet ISO 45001 | Auditor Interno","cursos/iqnet-iso-45001-auditor-interno/","T50","Ao vivo",16,1600],
+["NOR","IQNet ISO 45001 | Auditor Líder","cursos/iqnet-iso-45001-auditor-lider/","T50","Ao vivo",40,3500],
+["NOR","IQNet ISO 9001 | Auditor Interno","cursos/iqnet-iso-9001-auditor-interno/","T50","Ao vivo",16,1600],
+["NOR","IQNet ISO 9001 | Auditor Líder","cursos/iqnet-iso-9001-auditor-lider/","T50","Ao vivo",40,3500],
+["NOR","IQNet Sistema de Gestão Integrado | Auditor Líder","cursos/iqnet-sistema-de-gestao-integrado-auditor-lider/","T50","Ao vivo",40,4000],
+["NOR","ISO 14001:2026 | Mudanças e Transição da Norma","cursos/atualizacao-da-interpretacao-dos-requistos-iso14001/","T50","Ao vivo",8,750],
+["NOR","Interpretação dos Requisitos ISO 14001","cursos/interpretacao-dos-requisitos-iso-14001-2015/","T50","Ao vivo",16,1060],
+["NOR","Interpretação dos Requisitos ISO 45001","cursos/interpretacao-dos-requisitos-iso-45001-2018/","T50","Ao vivo",16,1060],
+["NOR","Interpretação dos Requisitos ISO 9001","cursos/interpretacao-dos-requisitos-iso-9001/","T50","Ao vivo",16,1060],
+["NOR","LGPD para DPO ou Encarregado de Dados","cursos/lgpd-para-dpo-ou-encarregado-de-dados/","T70","Online",18,439],
+["NOR","LGPD para área Jurídica","cursos/lgpd-para-area-juridica/","T70","Online",16,439],
+["NOR","LGPD para área de Compliance","cursos/lgpd-para-area-de-compliance/","T70","Online",16,439],
+["NOR","LGPD para área de Recursos Humanos","cursos/lgpd-para-area-de-recursos-humanos/","T70","Online",12,439],
+["NOR","LGPD para área de Tecnologia da Informação","cursos/lgpd-para-area-de-tecnologia-da-informacao/","T70","Online",17,439],
+["NOR","LGPD para áreas Administrativas e Financeiras","cursos/lgpd-para-areas-administrativas-e-financeiras/","T70","Online",14,439],
+["NOR","LGPD para áreas com Relacionamento com Clientes ou Fornecedores","cursos/lgpd-para-areas-com-relacionamento-com-clientes-ou-fornecedores/","T70","Online",12,439],
+["NOR","Mudanças e Transição da Norma ISO 9001","cursos/mudancas-e-transicao-da-norma-iso-9001/","T50","Ao vivo",8,750],
+["NOR","ONA | Formação de Avaliador Interno (OPSS 2026/2029)","cursos/ona-acreditacao-para-organizacoes-de-saude-formacao-de-avaliador-interno/","T50","Ao vivo",24,1790],
+["NOR","Riscos Psicossociais | ISO 45003","cursos/diretrizes-para-gestao-de-riscos-psicossociais-iso-450032021/","T50","Ao vivo",8,740]
 ];
 function slug(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60);}
 var C=RAW.map(function(r,i){return {id:"bf26-"+String(i+1).padStart(2,"0"),area:r[0],title:r[1],url:/^https?:/.test(r[2])?r[2]:U+r[2],tipo:r[3],formato:r[4],carga:r[5],preco:r[6],d:DISC[r[3]],slug:slug(r[1])};});
 var NF=new Intl.NumberFormat("pt-BR",{maximumFractionDigits:0});
-function BRL(v){return '<span class="rs">R$</span>'+NF.format(v);}
+var NF2=new Intl.NumberFormat("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+function BRL(v){return '<span class="rs">R$</span>'+(v%1?NF2:NF).format(v);}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
-function por(c){return Math.round(c.preco*(1-c.d/100));}
+function por(c){return Math.round(c.preco*(1-c.d/100)*100)/100;}
+function parc(c){return c.area==="MBA"?'<span class="parc">ou 24x de <b>'+BRL(por(c)/24)+'</b></span>':'';}
 function doTier(d){return C.filter(function(c){return c.d===d;});}
 var root=document.documentElement;
 function state(){return root.dataset.state||"bf";}
@@ -773,7 +791,7 @@ function card(c,i){
   return '<a class="card" data-c="'+c.d+'" href="'+esc(link(c))+'" target="_blank" rel="noopener" data-id="'+c.id+'" data-pos="'+(i+1)+'">'+
    '<div class="ctop"><span class="area">'+esc(AREAS[c.area])+'</span><span class="off">'+c.d+'% OFF</span></div>'+
    '<h3>'+esc(c.title)+'</h3>'+
-   '<div class="price"><s>'+BRL(c.preco)+'</s><b>'+BRL(por(c))+'</b></div>'+
+   '<div class="price"><s>'+BRL(c.preco)+'</s><b>'+BRL(por(c))+'</b>'+parc(c)+'</div>'+
    '<span class="go">'+(state()==="cyber"?'Última chance: '+c.d+'% OFF':'Garantir '+c.d+'% OFF')+'</span></a>';
 }
 function render(){
@@ -786,7 +804,7 @@ function render(){
 document.getElementById("grid").addEventListener("click",function(e){
   var a=e.target.closest(".card");if(!a)return;var c=C.find(function(x){return x.id===a.dataset.id;});
   track("select_item",{item_list_name:"vitrine",items:[{item_id:c.id,item_name:c.title,item_category:AREAS[c.area],price:por(c),discount_pct:c.d,coupon:TIER[c.d].code,index:+a.dataset.pos}]});
-  if(!temCupom(c.d)){e.preventDefault();abrir(c.d,"card",a.href);}
+  if(!temCupom(c.d)){e.preventDefault();abrir(c.d,"card",a.href,c.title);}
 });
 
 function toast(m){var t=document.createElement("div");t.className="toast";t.setAttribute("role","status");t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove();},1800);}
@@ -805,14 +823,14 @@ function setState(s){root.dataset.state=s;render();tick();}
 
 /* cupom: escolha do grupo, cadastro e envio ao RD Station.
    No RD: mesma conversão "LP BLACK26" para os três, com cf_bf26_cupom (BF40/BF50/BF70) e cf_bf26_desconto (40/50/70). */
-var SIMULA=true; /* protótipo: não envia ao RD */
+var SIMULA=true; /* demonstração: não envia ao RD Station */
 var RD_TOKEN="9ee55f4bbde6b5c2e898465e9bcd0f09",RD_ID="LP BLACK26";
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
 var ja={};function temCupom(d){return ja[d]||ls("bf26_cupom_"+d)==="1";}
 var Q=new URLSearchParams(location.search),ORIG={};
 var KS=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"],novo=KS.some(function(k){return Q.get(k);});
 KS.forEach(function(k){var v=novo?(Q.get(k)||""):(ls("bf26_"+k)||"");if(novo)ls("bf26_"+k,v);ORIG[k]=v;});
-var mdl=document.getElementById("mdl"),box=document.getElementById("mdlBox"),sPick=document.getElementById("mdlPick"),sForm=document.getElementById("mdlForm"),sOk=document.getElementById("mdlOk"),destino="#cursos",ultimoFoco=null,atual=70,origem="";
+var mdl=document.getElementById("mdl"),box=document.getElementById("mdlBox"),sPick=document.getElementById("mdlPick"),sForm=document.getElementById("mdlForm"),sOk=document.getElementById("mdlOk"),destino="#cursos",ultimoFoco=null,atual=70,origem="",cursoNome="",cursoUrl="";
 
 document.getElementById("pickList").innerHTML=[70,50,40].map(function(d){var l=doTier(d),min=Math.min.apply(null,l.map(por));
   return '<button type="button" data-c="'+d+'" data-tier="'+d+'" data-onde="escolha"><span class="pp">'+d+'%</span><span class="pn"><b>Cupom '+TIER[d].code+'</b><span>'+l.length+' cursos marcados com '+d+'%</span></span><span class="pa" aria-hidden="true">›</span></button>';}).join("");
@@ -833,10 +851,10 @@ function preencher(d){atual=d;var t=TIER[d],l=doTier(d),min=Math.min.apply(null,
 function mostrarOk(){passo(sOk);setTimeout(function(){document.getElementById("cupomCopy").focus();},30);var g=document.getElementById("okGo");g.href=destino;
   if(destino==="#cursos"){g.textContent="Ver cursos com "+atual+"%";g.removeAttribute("target");}else{g.textContent="Ir para o curso";g.target="_blank";g.rel="noopener";}}
 function abrirModal(){ultimoFoco=document.activeElement;mdl.hidden=false;document.body.style.overflow="hidden";}
-function abrir(d,onde,href){destino=href||"#cursos";origem=onde;if(mdl.hidden)abrirModal();preencher(d);
+function abrir(d,onde,href,nome){destino=href||"#cursos";cursoNome=href&&nome?nome:"";cursoUrl=cursoNome?href:"";origem=onde;if(mdl.hidden)abrirModal();preencher(d);
   if(temCupom(d)&&href)mostrarOk();else{passo(sForm);setTimeout(function(){document.getElementById("fNome").focus();},50);}
   track("cupom_open",{location:onde,coupon:TIER[d].code});}
-function escolher(onde){destino="#cursos";origem=onde;delete box.dataset.c;abrirModal();passo(sPick);setTimeout(function(){sPick.querySelector("button").focus();},50);track("cupom_open",{location:onde,coupon:"escolha"});}
+function escolher(onde){destino="#cursos";cursoNome="";cursoUrl="";origem=onde;delete box.dataset.c;abrirModal();passo(sPick);setTimeout(function(){sPick.querySelector("button").focus();},50);track("cupom_open",{location:onde,coupon:"escolha"});}
 function fechar(){mdl.hidden=true;document.body.style.overflow="";if(ultimoFoco)ultimoFoco.focus();}
 document.addEventListener("click",function(e){
   var p=e.target.closest("[data-pick]");if(p){escolher(p.dataset.pick);return;}
@@ -865,7 +883,7 @@ document.getElementById("cupomForm").addEventListener("submit",function(e){
   if(msg){err.textContent=msg;err.hidden=false;return;}
   err.hidden=true;btn.disabled=true;btn.textContent="Enviando...";
   var p={conversion_identifier:RD_ID,name:nome.value.trim(),email:mail.value.trim(),mobile_phone:"+55"+fone,
-    cf_bf26_cupom:code,cf_bf26_desconto:String(d),
+    cf_bf26_cupom:code,cf_bf26_desconto:String(d),cf_bf26_curso:cursoNome,cf_bf26_curso_url:cursoUrl,cf_bf26_origem_clique:cursoNome?"curso":"geral",
     cf_utm_source:ORIG.utm_source,cf_utm_medium:ORIG.utm_medium,cf_utm_campaign:ORIG.utm_campaign,cf_utm_content:ORIG.utm_content,cf_utm_term:ORIG.utm_term,
     cf_gclid:ORIG.gclid,cf_fbclid:ORIG.fbclid,cf_pagina_conversao:location.origin+location.pathname,
     cf_campanha_origem:ORIG.utm_campaign,cf_canal:[ORIG.utm_source,ORIG.utm_medium].filter(Boolean).join(" / "),
@@ -888,4 +906,5 @@ setInterval(function(){if(!forcado&&state()==="bf"&&Date.now()>=T.cyber)setState
 })();
 </script>
 
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/d26670e9-097b-4610-941c-71e92689568e-loader.js"></script>
 </body></html>
