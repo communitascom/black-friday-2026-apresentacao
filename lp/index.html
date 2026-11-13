@@ -757,7 +757,9 @@ document.querySelectorAll("[data-ncursos]").forEach(function(el){el.textContent=
 
 /* tagueamento */
 window.dataLayer=window.dataLayer||[];
-function track(ev,p){window.dataLayer.push(Object.assign({event:ev},p||{}));}
+var RST=["coupon","discount_pct","location","form_id","item_list_name","filter_type","filter_value","search_term","question","items","shown","state"];
+function track(ev,p){var o={event:ev};RST.forEach(function(k){o[k]=undefined;});window.dataLayer.push(Object.assign(o,p||{}));}
+var interagiu=false;["pointerdown","keydown","touchstart"].forEach(function(t){window.addEventListener(t,function(){interagiu=true;},{once:true,capture:true,passive:true});});
 function link(c){return c.url+"?utm_source=lp-black-friday&utm_medium=vitrine&utm_campaign=black-friday-2026&utm_content="+c.slug;}
 
 /* botão de cupom: título + 40 50 70 */
@@ -803,12 +805,12 @@ function render(){
 }
 document.getElementById("grid").addEventListener("click",function(e){
   var a=e.target.closest(".card");if(!a)return;var c=C.find(function(x){return x.id===a.dataset.id;});
-  track("select_item",{item_list_name:"vitrine",items:[{item_id:c.id,item_name:c.title,item_category:AREAS[c.area],price:por(c),discount_pct:c.d,coupon:TIER[c.d].code,index:+a.dataset.pos}]});
+  track("select_item",{item_list_name:"vitrine",coupon:TIER[c.d].code,discount_pct:c.d,items:[{item_id:c.id,item_name:c.title,item_category:AREAS[c.area],price:por(c),discount_pct:c.d,coupon:TIER[c.d].code,index:+a.dataset.pos}]});
   if(!temCupom(c.d)){e.preventDefault();abrir(c.d,"card",a.href,c.title);}
 });
 
 function toast(m){var t=document.createElement("div");t.className="toast";t.setAttribute("role","status");t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove();},1800);}
-document.querySelectorAll("#faqList details").forEach(function(d){d.addEventListener("toggle",function(){if(d.open)track("faq_open",{question:d.querySelector("summary").textContent.replace(/^\d+\./,"").trim()});});});
+document.querySelectorAll("#faqList details").forEach(function(d){d.addEventListener("toggle",function(){if(d.open&&interagiu)track("faq_open",{question:d.querySelector("summary").textContent.replace(/^\d+\./,"").trim()});});});
 document.querySelectorAll("[data-plan]").forEach(function(a){a.addEventListener("click",function(){track("select_item",{item_list_name:"vanzolini-play",items:[{item_id:"play-"+a.dataset.plan.toLowerCase(),item_name:a.dataset.plan,item_category:"Vanzolini Play",price:+a.dataset.total}]});});});
 document.getElementById("wa").addEventListener("click",function(){track("whatsapp_click",{location:"rodape_fixo",state:state()});});
 
@@ -823,7 +825,7 @@ function setState(s){root.dataset.state=s;render();tick();}
 
 /* cupom: escolha do grupo, cadastro e envio ao RD Station.
    No RD: mesma conversão "LP BLACK26" para os três, com cf_bf26_cupom (BF40/BF50/BF70) e cf_bf26_desconto (40/50/70). */
-var SIMULA=true; /* demonstração: não envia ao RD Station */
+var SIMULA=true; /* envia ao RD Station */
 var RD_TOKEN="9ee55f4bbde6b5c2e898465e9bcd0f09",RD_ID="LP BLACK26";
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
 var ja={};function temCupom(d){return ja[d]||ls("bf26_cupom_"+d)==="1";}
